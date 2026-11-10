@@ -17,10 +17,19 @@
   const groups = new Map();
   rv.forEach((el) => { const g = groups.get(el.parentElement) || []; g.push(el); groups.set(el.parentElement, g); });
   groups.forEach((g) => g.forEach((el, i) => { if (g.length > 1) el.style.setProperty('--d', Math.min(i, 6) * 0.07 + 's'); }));
-  if (reduce || !('IntersectionObserver' in window)) rv.forEach((el) => el.classList.add('in'));
+  // Reveal is an enhancement only: everything is visible by default. When armed, items below the fold start slightly
+  // faded and fade in as they approach; after ~1 s (or on print / resize / any error) everything is forced visible.
+  const showAll = () => { document.documentElement.classList.remove('rv-armed'); rv.forEach((el) => el.classList.add('in')); };
+  if (reduce || !('IntersectionObserver' in window)) showAll();
   else {
-    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
-    rv.forEach((el) => io.observe(el));
+    try {
+      const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0, rootMargin: '0px 0px 25% 0px' });
+      rv.forEach((el) => io.observe(el));
+      document.documentElement.classList.add('rv-armed');
+      setTimeout(showAll, 1000);
+      addEventListener('beforeprint', showAll);
+      addEventListener('resize', showAll, { once: true });
+    } catch { showAll(); }
   }
 
   // pause CSS animations of things that are off-screen

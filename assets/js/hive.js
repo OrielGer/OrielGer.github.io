@@ -101,6 +101,20 @@
     excl = { x0: l - h.left - pad, x1: rt - h.left + pad, y0: tp - h.top - pad, y1: bt - h.top + pad, rects };
   }
   const inExcl = (x, y, m = 0) => excl && excl.rects.some((r) => x > r.x0 - m && x < r.x1 + m && y > r.y0 - m && y < r.y1 + m);
+  // push a bee out of the text block (headline lines, lede, buttons, note) so it never flies over them
+  function keepOut(b) {
+    if (!excl) return;
+    const m = 16;
+    for (let it = 0; it < 4; it++) {
+      const r = excl.rects.find((q) => b.x > q.x0 - m && b.x < q.x1 + m && b.y > q.y0 - m && b.y < q.y1 + m);
+      if (!r) break;
+      const dl = b.x - (r.x0 - m), dr = (r.x1 + m) - b.x, dt = b.y - (r.y0 - m), db = (r.y1 + m) - b.y, mn = Math.min(dl, dr, dt, db);
+      if (mn === dl) b.x = r.x0 - m; else if (mn === dr) b.x = r.x1 + m; else if (mn === dt) b.y = r.y0 - m; else b.y = r.y1 + m;
+    }
+    b.x = clamp(b.x, 10, W - 10); b.y = clamp(b.y, 10, H - 10);
+  }
+  // a bee on (x, y) plus its label (about 190 x 32, 38px above) must stay clear of the text
+  const clearOfText = (x, y) => !excl || !excl.rects.some((r) => x + 100 > r.x0 && x - 100 < r.x1 && y + 22 > r.y0 && y - 56 < r.y1);
   const cellAt = (x, y) => {
     const dx = SQ3 * size, dy = 1.5 * size;
     const j0 = Math.round(y / dy); let best = null, bd = 1e9;
@@ -134,7 +148,7 @@
     for (let n = 0; n < 40; n++) {
       const c = cells[(Math.random() * cells.length) | 0];
       if (c.x < 20 || c.x > W - 20 || c.y < 120 || c.y > H - 50) continue;
-      if ((small || n < 30) && inExcl(c.x, c.y, 10)) continue;
+      if (n < 38 && !clearOfText(c.x, c.y)) continue;
       if (bees.some((o) => o !== b && o.cell && Math.hypot(o.cell.x - c.x, o.cell.y - c.y) < 150)) continue;
       if (Math.hypot(c.x - b.x, c.y - b.y) < 120) continue;
       return c;
@@ -160,6 +174,7 @@
       const px = b.x, nx = v * v * L.x0 + 2 * v * u * L.cx + u * u * L.x1, ny = v * v * L.y0 + 2 * v * u * L.cy + u * u * L.y1;
       if (Math.abs(nx - px) > 0.05) b.face = nx > px ? 1 : -1;
       b.x = nx; b.y = Math.max(small ? 112 : 82, ny);
+      keepOut(b);
       if (L.u >= 1) {
         b.state = 'work'; b.work = 0; b.leg = null;
         b.waits = !!b.task[2]; b.dur = b.waits ? rnd(4.2, 5.4) : rnd(2.2, 3.4);
@@ -179,6 +194,7 @@
     const ty = b.y - (small ? 26 : 38), k = 1 - Math.exp(-dt * 7);
     b.lx += (b.x - b.lx) * k; b.ly += (ty - b.ly) * k;
     b.la += ((b.state === 'idle' ? 0 : 1) - b.la) * (1 - Math.exp(-dt * 5));
+    if (b.state === 'work') keepOut(b);
     // trail
     const tr = b.trail; if (b.state === 'fly') { tr.push(b.x, b.y); if (tr.length > 20) tr.splice(0, 2); } else if (tr.length) tr.splice(0, 2);
   }
@@ -213,16 +229,16 @@
     ctx.fillStyle = '#1a1405'; ctx.beginPath(); ctx.moveTo(10.2, -1.2); ctx.lineTo(13.6, 0); ctx.lineTo(10.2, 1.2); ctx.fill();
     ctx.restore();
   }
-  const FONT = '600 13.5px Heebo, system-ui, "Segoe UI", Arial, sans-serif';
-  const FONT_S = '600 11px Heebo, system-ui, "Segoe UI", Arial, sans-serif';
+  const FONT = '600 15px Heebo, system-ui, "Segoe UI", Arial, sans-serif';
+  const FONT_S = '600 12px Heebo, system-ui, "Segoe UI", Arial, sans-serif';
   function drawLabel(b) {
     const text = b.task[0]; if (!text || b.la < 0.02) return;
     let a = b.la;
     ctx.font = small ? FONT_S : FONT; ctx.direction = rtl ? 'rtl' : 'ltr'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    const tw = ctx.measureText(text).width, pw = tw + 32, ph = small ? 23 : 28;
+    const tw = ctx.measureText(text).width, pw = tw + 34, ph = small ? 25 : 31;
     let x = clamp(b.lx, pw / 2 + 8, W - pw / 2 - 8), y = Math.max(ph / 2 + 8, b.ly);
     // fade where it would sit on top of the headline
-    if (excl && excl.rects.some((r) => x + pw / 2 > r.x0 && x - pw / 2 < r.x1 && y + ph / 2 > r.y0 && y - ph / 2 < r.y1)) a *= small ? 0 : 0.1;
+    if (excl && excl.rects.some((r) => x + pw / 2 > r.x0 && x - pw / 2 < r.x1 && y + ph / 2 > r.y0 && y - ph / 2 < r.y1)) a = 0;
     if (a < 0.02) return;
     const wait = !!b.task[2] && b.state === 'work';
     ctx.globalAlpha = a;
@@ -322,7 +338,7 @@
     // reduced motion / first paint: bees parked on cells, labels visible, nothing moves
     bees.forEach((b, k) => {
       let c = null;
-      for (let n = 0; n < 60 && !c; n++) { const q = cells[(k * 37 + n * 53) % cells.length]; if (q.x > 30 && q.x < W - 30 && q.y > 120 && q.y < H - 60 && !inExcl(q.x, q.y, 10)) c = q; }
+      for (let n = 0; n < 60 && !c; n++) { const q = cells[(k * 37 + n * 53) % cells.length]; if (q.x > 30 && q.x < W - 30 && q.y > 120 && q.y < H - 60 && clearOfText(q.x, q.y)) c = q; }
       if (c) { b.x = c.x; b.y = c.y; b.lx = c.x; b.ly = c.y - 38; b.cell = c; b.task = tasks[(k * 2) % tasks.length]; b.la = 1; b.state = 'work'; c.work = 0.6; b.waits = false; }
     });
     t = 1; frame(0);
