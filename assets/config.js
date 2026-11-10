@@ -6,9 +6,9 @@
 // MAC: null = "coming soon" ("בקרוב"); set { url: '…', size: '…' } when there is a Mac build to offer.
 // LAUNCHED: false = the GitHub *source code* links stay hidden; true = they show (when the source repo goes public).
 window.KAVERET_CONFIG = Object.freeze({
-  VERSION: '2.30.1',
-  WINDOWS: { url: 'https://github.com/OrielGer/kaveret-download/releases/download/v2.30.1/Kaveret-Setup-2.30.1.exe', size: '128 MB' },
-  ANDROID: { url: 'https://github.com/OrielGer/kaveret-download/releases/download/v2.30.1/Kaveret-2.30.1-android.apk' },
+  VERSION: '2.30.2',
+  WINDOWS: { url: 'https://github.com/OrielGer/kaveret-download/releases/download/v2.30.2/Kaveret-Setup-2.30.2.exe', size: '128 MB' },
+  ANDROID: { url: 'https://github.com/OrielGer/kaveret-download/releases/download/v2.30.2/Kaveret-2.30.2-android.apk' },
   MAC: null,
   LAUNCHED: false,
   REPO: 'https://github.com/OrielGer/kaveret',
