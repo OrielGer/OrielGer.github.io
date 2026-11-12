@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="he" dir="rtl" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>כוורת: צוות AI משלכם, בלי להיות מפתחים</title>
+<meta name="description" content="אפליקציה למחשב שהופכת את המנויים ל־Claude, ‏ChatGPT ו־Grok שכבר יש לכם לצוות של בוטים. מתקינים, מחברים את החשבון, ומבקשים במילים פשוטות. כל בוט חדש שואל לפני שהוא פועל. קוד פתוח.">
+<meta name="theme-color" content="#FBF8F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E0C08" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://kaveret.ai/he/">
+<link rel="alternate" hreflang="en" href="https://kaveret.ai/">
+<link rel="alternate" hreflang="he" href="https://kaveret.ai/he/">
+<link rel="alternate" hreflang="x-default" href="https://kaveret.ai/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="כוורת">
+<meta property="og:title" content="כוורת: צוות AI משלכם, בלי להיות מפתחים">
+<meta property="og:description" content="המנויים ל־Claude, ‏ChatGPT ו־Grok שכבר יש לכם, עובדים יחד כצוות של בוטים על המחשב שלכם. כל בוט חדש שואל לפני שהוא פועל.">
+<meta property="og:url" content="https://kaveret.ai/he/">
+<meta property="og:image" content="https://kaveret.ai/assets/og-he.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="כוורת: צוות AI משלכם, עם צילום מסך של האפליקציה">
+<meta property="og:locale" content="he_IL">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preload" href="../assets/fonts/heebo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/config.js" defer></script>
+<script src="../assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">דילוג לתוכן</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="כוורת, דף הבית">
+      <img src="../assets/icon.svg" width="32" height="32" alt="">
+      <span>כוורת</span>
+    </a>
+    <nav class="nav" aria-label="ראשי">
+      <a href="#how">איך זה עובד</a>
+      <a href="#can-do">מה אפשר לעשות</a>
+      <a href="#approvals">אישורים</a>
+      <a href="#download">הורדה</a>
+      <a href="#faq">שאלות</a>
+    </nav>
+    <div class="top-actions">
+      <a class="lang" href="../" hreflang="en" lang="en" aria-label="English (אנגלית)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg>
+        English
+      </a>
+      <a class="btn btn-primary btn-sm" href="#download" data-dl="releases"><span data-soon="ביום ראשון 15.11">הורדה</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <p class="pill"><b>חדש</b> קוד פתוח · ל־Windows, ומק וטלפון בגרסת בטא</p>
+    <h1 id="hero-title"><span class="line"><span class="hl">צוות AI</span> משלכם.</span> <span class="line">בלי להיות מפתחים.</span></h1>
+    <p class="lede">כוורת הופכת את מנויי ה־AI שאתם כבר משלמים עליהם לצוות של בוטים שעובד בשבילכם, על המחשב שלכם. מתקינים, מחברים את החשבון, ומספרים לבאדי, הבוט הראשי, מה צריך, במילים פשוטות.</p>
+    <div class="cta">
+      <a class="btn btn-primary btn-lg" href="#download" data-dl="releases">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+        <span data-soon="מגיע ביום ראשון 15.11">הורדה ל־Windows</span>
+      </a>
+      <a class="link" href="#download">מק, אנדרואיד ואייפון</a>
+    </div>
+    <p class="cta-note">עובד עם המנויים שלכם, לפי התנאים של כל חברה.</p>
+
+    <figure class="stage">
+      <div class="window">
+        <picture>
+          <source media="(max-width: 600px) and (prefers-color-scheme: dark)" type="image/webp" srcset="../assets/img/team-phone-he-dark-390.webp" width="390" height="844">
+          <source media="(max-width: 600px)" type="image/webp" srcset="../assets/img/team-phone-he-light-390.webp" width="390" height="844">
+          <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="../assets/img/team-he-dark-1920.webp 1920w, ../assets/img/team-he-dark-1440.webp 1440w, ../assets/img/team-he-dark-960.webp 960w, ../assets/img/team-he-dark-640.webp 640w" sizes="(max-width: 1240px) calc(100vw - 40px), 1160px">
+          <img src="../assets/img/team-he-light-1440.webp" srcset="../assets/img/team-he-light-1920.webp 1920w, ../assets/img/team-he-light-1440.webp 1440w, ../assets/img/team-he-light-960.webp 960w, ../assets/img/team-he-light-640.webp 640w" sizes="(max-width: 1240px) calc(100vw - 40px), 1160px" width="1920" height="1080" fetchpriority="high" alt="אפליקציית כוורת. בצד, צוות של בוטים: באדי, חוקר, עוזר מיילים, מתכנן טיולים, בית וחשבונות ומעקב מחירים. בשיחה באדי מספר מה הצוות עשה בלילה, ואז יוצר בוט מעקב מחירים על ChatGPT שעוקב אחרי מחירי מחשבים ניידים, וקובע תזכורת ליום ראשון.">
+        </picture>
+      </div>
+      <figcaption>האפליקציה האמיתית, עם נתוני הדגמה: באדי, הבוט הראשי, מקים בוט חדש למשימה.</figcaption>
+    </figure>
+
+    <div class="engines" aria-label="עובד עם">
+      <span class="lbl">עובד עם המנויים שכבר יש לכם</span>
+      <span class="chip"><i class="e-claude"></i>Claude</span>
+      <span class="chip"><i class="e-chatgpt"></i>ChatGPT</span>
+      <span class="chip"><i class="e-grok"></i>Grok</span>
+      <span class="chip"><i class="e-gemini"></i>Gemini<span class="star" aria-hidden="true">*</span></span>
+      <span class="chip"><i class="e-ollama"></i>Ollama, על המחשב שלכם</span>
+      <span class="lbl fine-lbl"><span aria-hidden="true">*</span>Gemini מתחבר עם מפתח API של Google AI Studio, ש־Google מחייבת עליו בנפרד.</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow">איך זה עובד</span>
+      <h2 id="how-title">שלושה צעדים לתוצאה הראשונה</h2>
+    </div>
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="n" aria-hidden="true">1</span>
+        <h3>מתקינים את כוורת</h3>
+        <p>מורידים את קובץ ההתקנה ומפעילים אותו. Windows שואל פעם אחת כי האפליקציה חדשה; למטה מראים בדיוק על מה ללחוץ.</p>
+        <span class="step-line" aria-hidden="true"></span>
+      </li>
+      <li class="step reveal">
+        <span class="n" aria-hidden="true">2</span>
+        <h3>מחברים את מה שמשלמים עליו</h3>
+        <p>בוחרים Claude, ‏ChatGPT או Grok. ב־Windows לחיצה אחת מתקינה את הכלי הרשמי של אותה חברה בתוך האפליקציה. אחר כך נכנסים לחשבון שלכם בחלון שלו.</p>
+        <span class="step-line" aria-hidden="true"></span>
+      </li>
+      <li class="step reveal">
+        <span class="n" aria-hidden="true">3</span>
+        <h3>מבקשים מבאדי</h3>
+        <p>כותבים מה צריך, כמו הודעה לחבר. באדי עונה, או מקים בוט חדש למשימה ומספר מה עשה.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec sec-alt" aria-label="למה כוורת">
+  <div class="wrap">
+
+    <article class="feature">
+      <div class="copy reveal">
+        <span class="eyebrow">פשוט</span>
+        <h3>לא צריך להיות מפתחים</h3>
+        <p>בלי קובצי הגדרות, בלי שרת ובלי קוד. כוורת מובילה אתכם בהתקנה על המסך, ומשם פשוט מדברים איתה.</p>
+        <ul class="ticks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>לחיצה אחת מתקינה את המנוע.</b> ב־Windows כוורת מפעילה בשבילכם את ההתקנה הרשמית ומראה את ההתקדמות.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>באדי בונה לכם צוות.</b> מבקשים בוט שעוקב אחרי מחירים או מסדר את המיילים, ובאדי יוצר אותו, בוחר מנוע ומסביר מה הוא יעשה.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>אפליקציות כשצריך.</b> כשמשימה צריכה את המייל או היומן, הבוט מציג כרטיס חיבור בתוך השיחה.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>משהו לא עובד?</b> בהגדרות, "בדוק שהכל עובד" מוצא את הבעיה ולוקח אתכם למסך שמתקן אותה.</span></li>
+        </ul>
+      </div>
+      <figure class="shot reveal">
+        <div class="window">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="../assets/img/connect-he-dark-1366.webp 1366w, ../assets/img/connect-he-dark-960.webp 960w, ../assets/img/connect-he-dark-640.webp 640w" sizes="(max-width: 900px) calc(100vw - 40px), 640px">
+            <img src="../assets/img/connect-he-light-960.webp" srcset="../assets/img/connect-he-light-1366.webp 1366w, ../assets/img/connect-he-light-960.webp 960w, ../assets/img/connect-he-light-640.webp 640w" sizes="(max-width: 900px) calc(100vw - 40px), 640px" width="1366" height="768" loading="lazy" decoding="async" alt="המסך הראשון של כוורת: באדי מציג את עצמו ומציע רעיונות להתחלה. ליד השיחה, חלונית ששואלת אילו מנויים יש לכם: Claude Code מוכן, ל־ChatGPT יש כפתור פתיחת התקנה, ול־Grok כפתור פתיחת חלון התחברות.">
+          </picture>
+        </div>
+        <figcaption>המסך הראשון: השיחה עם באדי, והמנויים שלכם לידה.</figcaption>
+      </figure>
+    </article>
+
+    <article class="feature flip">
+      <div class="copy reveal">
+        <span class="eyebrow">המנויים שלכם</span>
+        <h3>כל מה שאתם משלמים עליו, כצוות אחד. בלי חשבונות API.</h3>
+        <p>‏Claude, ‏ChatGPT ו־Grok עובדים כל אחד על המנוי שלכם, דרך הכלי הרשמי של החברה, כשאתם מחוברים בעצמכם. לכל בוט נותנים את המנוע שמתאים לו.</p>
+        <ul class="ticks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>כמה מנועים בצוות אחד.</b> לכל בוט מנוע משלו, ועד שישה בוטים יכולים לדבר באותה שיחה קבוצתית.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>נגמרה המכסה?</b> מעבירים את הבוט למנוע אחר בלחיצה, או נותנים לו להמשיך לבד במנוע של חברה אחרת.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>רואים כמה נוצל.</b> כמה מכל מנוי כבר נוצל, עם התראה ב־80%.</span></li>
+        </ul>
+      </div>
+      <figure class="shot shot-inset reveal">
+        <div class="stack">
+        <div class="window">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="../assets/img/engines-he-dark-1110.webp 1110w, ../assets/img/engines-he-dark-760.webp 760w" sizes="(max-width: 900px) calc(100vw - 40px), 640px">
+            <img src="../assets/img/engines-he-light-760.webp" srcset="../assets/img/engines-he-light-1110.webp 1110w, ../assets/img/engines-he-light-760.webp 760w" sizes="(max-width: 900px) calc(100vw - 40px), 640px" width="1110" height="768" loading="lazy" decoding="async" alt="הגדרות, מנועים: ‏Claude Code מחובר במנוי Pro, ‏ChatGPT מחובר במנוי Plus, ‏Grok מחובר במנוי SuperGrok, ו־Gemini מחובר עם מפתח API.">
+          </picture>
+        </div>
+        <div class="window inset">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="../assets/img/limit-he-dark-630.webp">
+            <img src="../assets/img/limit-he-light-630.webp" width="630" height="152" loading="lazy" decoding="async" alt="כרטיס מגבלת שימוש בשיחה: הגעת למגבלת השימוש של Claude. כפתורים: להעביר את חוקר ל־ChatGPT, להעביר את חוקר ל־Grok, ותזכורת כשזה מתאפס.">
+          </picture>
+        </div>
+        </div>
+        <figcaption>הגדרות › מנועים, והכרטיס שמופיע כשהמכסה נגמרת.</figcaption>
+      </figure>
+    </article>
+
+    <article class="feature">
+      <div class="copy reveal">
+        <span class="eyebrow">אמון</span>
+        <h3>שואל לפני שהוא פועל</h3>
+        <p>בוט חדש מציג לכם כרטיס ומחכה לאישור לפני שהוא משנה קובץ, מריץ פקודה שמשנה משהו, שולח הודעה או מוציא כסף. מה מותר לו מכאן והלאה, אתם מחליטים.</p>
+        <ul class="ticks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>תוכן מבחוץ לא יכול להפעיל אותו בשקט.</b> אחרי שבוט קרא דף, מייל או הודעה של מישהו אחר, כל פעולה בשיחה הזו צריכה אישור חדש, וסיסמאות וסודות לא נמסרים לו.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>הדברים הגדולים מגיעים אליכם.</b> בהגדרה המומלצת, תשלומים, סיסמאות, הודעות לאנשים אחרים, התקנות ושינויי מערכת תמיד שואלים, גם כשצעדים שגרתיים רצים לבד.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>ביטול.</b> רואים מה בוט שינה בתיקייה שלו, ומבטלים בלחיצה.</span></li>
+        </ul>
+      </div>
+      <figure class="shot reveal">
+        <div class="window">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="../assets/img/approve-he-dark-884.webp 884w, ../assets/img/approve-he-dark-640.webp 640w" sizes="(max-width: 900px) calc(100vw - 40px), 640px">
+            <img src="../assets/img/approve-he-light-640.webp" srcset="../assets/img/approve-he-light-884.webp 884w, ../assets/img/approve-he-light-640.webp 640w" sizes="(max-width: 900px) calc(100vw - 40px), 640px" width="884" height="500" loading="lazy" decoding="async" alt="כרטיס אישור: לאשר לעוזר מיילים ליצור או לשנות קובץ? מוצגות השורות המדויקות שייכתבו לקובץ, עם הכפתורים אישור הפעם, תמיד בשיחה הזו, לא לשאול על זה שוב, ולא הפעם.">
+          </picture>
+        </div>
+        <figcaption>כרטיס אישור מראה בדיוק מה ישתנה.</figcaption>
+      </figure>
+    </article>
+
+  </div>
+</section>
+
+<section class="sec" id="can-do" aria-labelledby="can-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">מה אפשר לעשות</span>
+      <h2 id="can-title">פחות סידורים, בבית ובעבודה</h2>
+      <p>אומרים לבוט איזו תוצאה רוצים. הנה כמה דברים שאנשים מעבירים אליו ראשונים.</p>
+    </div>
+    <div class="outcomes">
+      <article class="oc reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l6 6 4-4 8 8"/><path d="M15 17h6v-6"/></svg></span>
+        <h3>לדעת כשהמחיר יורד</h3>
+        <p>בוט עוקב אחרי דפי המוצרים שחשובים לכם ומודיע כשמחיר יורד, כשמתפנה תור או כשדף משתנה.</p>
+        <span class="who">בבית</span>
+      </article>
+      <article class="oc reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+        <h3>תשובות שמחכות לכם</h3>
+        <p>הוא קורא את תיבת הדואר וכותב בשבילכם תשובות. הן מחכות כטיוטה עד שלוחצים "שליחה", אלא אם אישרתם נמען מסוים.</p>
+        <span class="who">עסק קטן</span>
+      </article>
+      <article class="oc reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg></span>
+        <h3>סיכום מכל פגישה</h3>
+        <p>אחרי שאתם מאשרים, הוא מצטרף לשיחת Zoom, ‏Google Meet או Teams ושולח לכם סיכום, החלטות ומשימות.</p>
+        <span class="who">עסק קטן</span>
+      </article>
+      <article class="oc reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></span>
+        <h3>להשוות לפני שמשלמים</h3>
+        <p>ביטוח, ספקים, מחשב חדש: מחקר מעמיק קורא לפחות חמישה מקורות ונותן תשובה עם הקישורים.</p>
+        <span class="who">בבית</span>
+      </article>
+      <article class="oc reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="7.5"/><path d="M12 9.5V13l2.5 2M5 4 2.5 6.5M19 4l2.5 2.5"/></svg></span>
+        <h3>שגרות שרצות לבד</h3>
+        <p>סיכום בוקר, מבט שבועי על החשבונות, תזכורת ביום ראשון. אומרים פעם אחת, במילים פשוטות.</p>
+        <span class="who">בבית</span>
+      </article>
+      <article class="oc reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span>
+        <h3>גם מהטלפון</h3>
+        <p>מדברים עם הבוטים בטלגרם, או באפליקציית כוורת בטלפון, כל עוד המחשב דולק.</p>
+        <span class="who">לכולם</span>
+      </article>
+    </div>
+    <p class="fine reveal">חלק מהדברים צריכים חיבור חד־פעמי: חשבון המייל, בוט בטלגרם או קישור לפגישה. שיחות טלפון והודעות SMS צריכות חשבון Twilio משלכם.</p>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="approvals" aria-labelledby="ap-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">איך עובדים האישורים</span>
+      <h2 id="ap-title">אתם מחליטים, במילים פשוטות</h2>
+      <p>אין הגדרות ללמוד מראש. בוט שואל, אתם עונים, ותמיד אפשר לשנות את דעתכם.</p>
+    </div>
+    <div class="approve-grid">
+      <ol class="rules">
+        <li class="rule reveal">
+          <span class="k" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5.5c0 4.4 3 8 7 9.5 4-1.5 7-5.1 7-9.5V6l-7-3Z"/></svg></span>
+          <div>
+            <h3>כרטיס כשזה חשוב</h3>
+            <p>לפני שבוט עושה משהו שצריך רשות, כרטיס אומר מה הוא רוצה לעשות ואיפה. עונים בנגיעה אחת.</p>
+            <div class="btns-demo" aria-hidden="true"><span class="kbtn on">אישור הפעם</span><span class="kbtn">תמיד בשיחה הזו</span><span class="kbtn">לא הפעם</span></div>
+          </div>
+        </li>
+        <li class="rule reveal">
+          <span class="k" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg></span>
+          <div>
+            <h3>הקצב שלכם, לכל בוט בנפרד</h3>
+            <p>לכל בוט הגדרת אישורים משלו, מ"לשאול כל פעם" ועד לתת לצעדים שגרתיים לעבור. משנים מתי שרוצים.</p>
+          </div>
+        </li>
+        <li class="rule reveal">
+          <span class="k" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg></span>
+          <div>
+            <h3>תוכן מבחוץ מסומן</h3>
+            <p>אם בוט קרא דף, מייל או הודעה של מישהו אחר, מופיע גלובוס בראש השיחה. מאותו רגע כל פעולה צריכה אישור חדש, ו"תמיד" כבוי עד שלוחצים "סמן כבטוח".</p>
+          </div>
+        </li>
+        <li class="rule reveal">
+          <span class="k" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 1 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9Z"/><path d="M10 20a2.2 2.2 0 0 0 4 0"/></svg></span>
+          <div>
+            <h3>עונים מהטלפון</h3>
+            <p>כרטיסים מגיעים לטלפון כהתראה. רגילים אפשר לאשר ישר מההתראה; תשלומים, סודות ושיחות עם תוכן מבחוץ פותחים קודם את הכרטיס המלא.</p>
+          </div>
+        </li>
+      </ol>
+      <figure class="shot reveal">
+        <div class="window">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="../assets/img/outside-he-dark-884.webp 884w, ../assets/img/outside-he-dark-640.webp 640w" sizes="(max-width: 900px) calc(100vw - 40px), 560px">
+            <img src="../assets/img/outside-he-light-640.webp" srcset="../assets/img/outside-he-light-884.webp 884w, ../assets/img/outside-he-light-640.webp 640w" sizes="(max-width: 900px) calc(100vw - 40px), 560px" width="884" height="500" loading="lazy" decoding="async" alt="אותה שיחה אחרי שהבוט קרא מייל. גלובוס בראש השיחה מסביר: תוכן מבחוץ בשיחה. כדי שתוכן כזה לא יוכל להפעיל פעולות בשמך, כל פעולה מחכה לאישור שלך. כפתור סמן כבטוח. בכרטיס האישור נשארו רק אישור הפעם ולא הפעם.">
+          </picture>
+        </div>
+        <figcaption>אחרי קריאת מייל: הגלובוס מסביר למה, ובכרטיס אין "תמיד".</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="download" aria-labelledby="dl-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">הורדה והתקנה</span>
+      <h2 id="dl-title">מורידים את כוורת</h2>
+      <p>כוורת רצה על המחשב שלכם. הטלפון מגיע אליה דרך Tailscale, אפליקציה חינמית שמתקינים בשניהם.</p>
+      <p class="launch-note" id="launch-note" hidden>ההורדות נפתחות ביום ראשון 15.11, עם הגרסה הציבורית הראשונה. עד אז כפתורי ההורדה נשארים בדף הזה.</p>
+    </div>
+    <div class="dl-grid">
+      <article class="card main reveal" aria-labelledby="win-title">
+        <h3 id="win-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Windows</h3>
+        <p>קובץ ההתקנה מגיע מדף הגרסאות של הפרויקט ב־GitHub.</p>
+        <a class="btn btn-primary btn-lg" href="#download" data-dl="releases">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+          <span data-soon="מגיע ביום ראשון 15.11">הורדה ל־Windows</span>
+        </a>
+        <ol class="howto">
+          <li><span>מורידים את <b class="nowrap" dir="ltr">Kaveret-Setup-<i>version</i>.exe</b> מדף הגרסאות ופותחים אותו.</span></li>
+          <li><span>‏Windows מציג "<bdi dir="ltr"><b>Windows protected your PC</b></bdi>" (או "Windows הגן על המחשב שלך"). זה קורה כי האפליקציה חדשה וקובץ ההתקנה עוד לא חתום דיגיטלית.</span></li>
+          <li><span>לוחצים <span class="kbd" dir="ltr">More info</span> (מידע נוסף), ואז <span class="kbd" dir="ltr">Run anyway</span> (הפעל בכל מקרה).</span></li>
+          <li><span>מסיימים את ההתקנה. כוורת נפתחת עם באדי, מוכנה לחבר את המנוי הראשון.</span></li>
+        </ol>
+        <div class="smart">
+          <h4>רוצים לבדוק את הקובץ קודם?</h4>
+          <p>בכל גרסה יש רשימת SHA-256 לכל קובץ. <a class="link" href="#download" data-dl="install">מדריך ההתקנה</a> מראה את הפקודה האחת שמשווה ביניהם.</p>
+        </div>
+      </article>
+      <article class="card reveal" aria-labelledby="mac-title">
+        <h3 id="mac-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg>מק <span class="tag">בטא</span></h3>
+        <p>למעבדי Apple ולמעבדי Intel. הגרסה למק עוד לא מאושרת (notarized) על ידי Apple, לכן בפעם הראשונה לוחצים לחיצה ימנית על Kaveret ובוחרים Open. ב־macOS 15 ואילך: הגדרות המערכת › פרטיות ואבטחה › Open Anyway.</p>
+        <a class="btn btn-ghost btn-sm" href="#download" data-dl="releases"><span data-soon="למק: מגיע 15.11">הורדות למק</span></a>
+      </article>
+      <article class="card reveal" aria-labelledby="phone-title">
+        <h3 id="phone-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>טלפון <span class="tag">גרסת ניסיון</span></h3>
+        <p><b>מה צריך:</b> ‏Tailscale, אפליקציה חינמית, במחשב ובטלפון, מחוברת לאותו חשבון Tailscale בשניהם. דרכה הטלפון מגיע לכוורת באופן פרטי. בכוורת, הגדרות › מכשירים › גישה מהטלפון ומחשבים נוספים מדריך אתכם ומציג קוד QR.</p>
+        <p><b>אנדרואיד:</b> מתקינים ידנית את אפליקציית הניסיון מדף הגרסאות (ומאשרים התקנה מהמקור הזה כשנשאלים), ואז מקלידים את הכתובת שמופיעה בהגדרות › מכשירים. <b>אייפון:</b> סורקים את קוד ה־QR במצלמה, ואז ב־Safari בוחרים "הוספה למסך הבית".</p>
+        <a class="btn btn-ghost btn-sm" href="phone.html">מדריך לטלפון</a>
+      </article>
+    </div>
+    <div class="reqs">
+      <p class="req reveal"><b>המחשב נשאר דולק</b>הבוטים רצים על המחשב שלכם. כדי להגיע אליהם מהטלפון, המחשב צריך להיות דלוק וער, וכוורת פתוחה.</p>
+      <p class="req reveal"><b>המנויים שלכם, התנאים שלהם</b>כוורת משתמשת בחשבונות שלכם דרך הכלי הרשמי של כל חברה. התנאים ומגבלות השימוש של אותה חברה חלים.</p>
+      <p class="req reveal"><b>לינוקס</b>בלינוקס מריצים את כוורת מקוד המקור. <a class="link" href="#download" data-dl="install">מדריך ההתקנה</a> מפרט את השלבים.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-tight" aria-labelledby="oss-title">
+  <div class="wrap">
+    <div class="oss reveal">
+      <img src="../assets/icon.svg" width="72" height="72" alt="">
+      <div>
+        <h2 id="oss-title">קוד פתוח, ברישיון MIT</h2>
+        <p>כל שורה בכוורת גלויה. אפשר לקרוא, לבנות בעצמכם או לעזור לשפר. האפליקציה לא שולחת נתוני שימוש; עדכונים מגיעים מדף הגרסאות של הפרויקט ב־GitHub.</p>
+      </div>
+      <a class="btn btn-ghost" href="#download" data-dl="repo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>
+        לקוד המקור
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow">שאלות</span>
+      <h2 id="faq-title">שאלות טובות</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>כמה עולה כוורת?</summary>
+        <div class="a"><p>כוורת עצמה היא קוד פתוח ברישיון MIT. העבודה של ה־AI רצה על המנויים שכבר יש לכם ב־Claude, ‏ChatGPT או Grok, ולכן התוכניות והמגבלות שלהם חלות. ‏Gemini עובד עם מפתח API של Google AI Studio, ש־Google מחייבת עליו.</p></div>
+      </details>
+      <details>
+        <summary>צריך להבין במחשבים?</summary>
+        <div class="a"><p>לא. מתקינים כמו כל אפליקציה אחרת, מחברים את המנוי מהמסך הראשון, ומדברים עם באדי במילים פשוטות. ב־Windows כוורת מתקינה בשבילכם את הכלי הרשמי של כל חברה בלחיצה אחת.</p></div>
+      </details>
+      <details>
+        <summary>המידע שלי מגיע אליכם?</summary>
+        <div class="a"><p>לא. לכוורת אין שרת משלה, והאפליקציה לא שולחת נתוני שימוש. השיחות נשמרות על המחשב שלכם. הכלי של כל חברת AI שולח את הבקשות שלכם לאותה חברה, לפי מדיניות הפרטיות שלה.</p><p>בהגדרות › נתונים וגיבויים יש מסך שמראה לאן המידע שלכם הולך. שיחה פרטית לא נשמרת: אחרי שסוגרים אותה לא נשאר ממנה כלום בדיסק.</p></div>
+      </details>
+      <details>
+        <summary>בוט יכול להוציא כסף או לשלוח הודעות בשמי?</summary>
+        <div class="a"><p>בהגדרה המומלצת, לא. תשלומים, הודעות לאנשים אחרים, סיסמאות, התקנות ושינויי מערכת מגיעים אליכם ככרטיס, ותשובות במייל מחכות כטיוטה עד שלוחצים "שליחה" (אלא אם אישרתם את הנמען).</p><p>בוט יכול לעשות יותר בלי לשאול רק אם נתתם לו גישה מלאה בעצמכם, בהגדרות של אותו בוט.</p></div>
+      </details>
+      <details>
+        <summary>מה קורה כשנגמרת המכסה?</summary>
+        <div class="a"><p>השיחה מראה מתי המנוי מתאפס ומציעה להעביר את הבוט בלחיצה למנוע אחר שחיברתם. אפשר גם לתת לכוורת להמשיך לבד עם מנוע של חברה אחרת.</p></div>
+      </details>
+      <details>
+        <summary>אפשר להשתמש מהטלפון?</summary>
+        <div class="a"><p>כן, כל עוד המחשב דולק וכוורת פתוחה. מתקינים את Tailscale (חינם) במחשב ובטלפון ונכנסים לאותו חשבון בשניהם. אחר כך הגדרות › מכשירים מדריך אתכם בחיבור הטלפון, באפליקציית הניסיון לאנדרואיד או במסך הבית באייפון. ב<a class="link" href="phone.html">מדריך לטלפון</a> יש את השלבים. אפשר גם לדבר עם הבוטים בטלגרם.</p></div>
+      </details>
+      <details>
+        <summary>למה Windows מזהיר בהתקנה?</summary>
+        <div class="a"><p>קובץ ההתקנה עוד לא חתום בתעודת חתימת קוד מסחרית, ולכן Windows לא מכיר אותו. לוחצים More info ואז Run anyway. כדי לוודא שהקובץ הוא בדיוק מה שהפרויקט פרסם, משווים את ה־SHA-256 שלו לרשימה בדף הגרסה.</p></div>
+      </details>
+      <details>
+        <summary>באילו שפות האפליקציה?</summary>
+        <div class="a"><p>מסכי האפליקציה זמינים באנגלית, עברית, ערבית, רוסית, ספרדית, צרפתית, גרמנית ופורטוגזית.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec closing" aria-labelledby="end-title">
+  <div class="wrap reveal">
+    <img class="bee" src="../assets/icon.svg" width="88" height="88" alt="">
+    <h2 id="end-title">תנו למנויים שלכם לעבוד בשבילכם</h2>
+    <div class="cta">
+      <a class="btn btn-primary btn-lg" href="#download" data-dl="releases">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+        <span data-soon="מגיע ביום ראשון 15.11">הורדה ל־Windows</span>
+      </a>
+      <a class="link" href="#download">מערכות אחרות</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="./"><img src="../assets/icon.svg" width="28" height="28" alt=""><span>כוורת</span></a>
+      <p>עזרה ושאלות: <a href="mailto:support@kaveret.ai" dir="ltr">support@kaveret.ai</a></p>
+    </div>
+    <nav aria-label="תחתית">
+      <a href="#download" data-dl="install">מדריך התקנה</a>
+      <a href="#download" data-dl="releases">גרסאות</a>
+      <a href="#download" data-dl="repo">קוד המקור</a>
+      <a href="#download" data-dl="license">רישיון MIT</a>
+      <a href="privacy/">פרטיות</a>
+      <a href="terms/">תנאי שימוש</a>
+      <a href="../" hreflang="en" lang="en">English</a>
+    </nav>
+    <p class="legal">‏Claude, ‏ChatGPT, ‏Grok, ‏Gemini, ‏Ollama, ‏Zoom, ‏Google Meet, ‏Microsoft Teams, טלגרם, ‏Twilio, ‏Tailscale, ‏Windows, ‏Apple, ‏macOS, ‏Intel, אנדרואיד, אייפון, ‏Safari, ‏GitHub ושמות מוצרים אחרים הם סימנים מסחריים של בעליהם. כוורת היא פרויקט קוד פתוח עצמאי, ואינה קשורה לאף אחד מהם ואינה מאושרת על ידם.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,235 +1,463 @@
 <!doctype html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="ltr" class="no-js">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; media-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
-<title>כוורת — צוות AI אישי על המנויים שכבר יש לך</title>
-<meta name="description" content="כוורת היא אפליקציית קוד פתוח למחשב שמריצה צוות Bots אישי על Claude, ChatGPT, Grok או מודלים מקומיים, ועוצרת לבקש את האישור שלך לפני כל דבר רגיש.">
-<link rel="canonical" href="https://kaveret.ai/">
-<link rel="alternate" hreflang="he" href="https://kaveret.ai/">
-<link rel="alternate" hreflang="en" href="https://kaveret.ai/en/">
-<link rel="alternate" hreflang="x-default" href="https://kaveret.ai/">
-<meta name="theme-color" content="#050505">
-<meta name="color-scheme" content="dark">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Kaveret: your own AI team, no developer needed</title>
+<meta name="description" content="A desktop app that turns the Claude, ChatGPT and Grok subscriptions you already pay for into a team of AI bots. Install it, connect your account, and ask in plain words. Every new bot asks before it acts. Open source.">
+<meta name="theme-color" content="#FBF8F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E0C08" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://kaveret.ai/">
+<link rel="alternate" hreflang="en" href="https://kaveret.ai/">
+<link rel="alternate" hreflang="he" href="https://kaveret.ai/he/">
+<link rel="alternate" hreflang="x-default" href="https://kaveret.ai/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="כוורת">
-<meta property="og:title" content="כוורת — צוות AI אישי על המנויים שכבר יש לך">
-<meta property="og:description" content="כוורת היא אפליקציית קוד פתוח למחשב שמריצה צוות Bots אישי על Claude, ChatGPT, Grok או מודלים מקומיים, ועוצרת לבקש את האישור שלך לפני כל דבר רגיש.">
+<meta property="og:site_name" content="Kaveret">
+<meta property="og:title" content="Kaveret: your own AI team, no developer needed">
+<meta property="og:description" content="The Claude, ChatGPT and Grok subscriptions you already pay for, working as one team of bots on your computer. Every new bot asks before it acts.">
 <meta property="og:url" content="https://kaveret.ai/">
-<meta property="og:locale" content="he_IL">
-<meta property="og:image" content="https://kaveret.ai/assets/og-he.png">
+<meta property="og:image" content="https://kaveret.ai/assets/og-en.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="כוורת — צוות AI אישי">
+<meta property="og:image:alt" content="Kaveret: your own AI team, with a screenshot of the app">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="he_IL">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="preload" href="/assets/fonts/heebo-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=20261110d">
-<script src="/assets/js/boot.js?v=20261110d"></script>
-<script src="/assets/config.js?v=20261110d" defer></script>
-<script src="/assets/js/download.js?v=20261110d" defer></script>
-<script src="/assets/js/motion.js?v=20261110d" defer></script>
-<script src="/assets/js/hive.js?v=20261110d" defer></script>
-<script src="/assets/js/honeycomb.js?v=20261110d" defer></script>
-<script src="/assets/js/demo.js?v=20261110d" defer></script>
-<script src="/assets/js/lightbox.js?v=20261110d" defer></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Kaveret","alternateName":"כוורת","url":"https://kaveret.ai/","description":"כוורת היא אפליקציית קוד פתוח למחשב שמריצה צוות Bots אישי על Claude, ChatGPT, Grok או מודלים מקומיים, ועוצרת לבקש את האישור שלך לפני כל דבר רגיש.","applicationCategory":"ProductivityApplication","operatingSystem":"Windows 10, Windows 11, Android","softwareVersion":"2.30.3","license":"https://opensource.org/license/mit","isAccessibleForFree":true,"inLanguage":["he","en"],"image":"https://kaveret.ai/assets/og-he.png"}</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="assets/fonts/heebo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/config.js" defer></script>
+<script src="assets/site.js" defer></script>
 </head>
-<body class="home">
-<a class="skip" href="#main">דילוג לתוכן</a>
-<header class="top"><div class="wrap">
-  <a class="brand" href="/"><img src="/assets/logo.svg" width="30" height="30" alt=""><span>כוורת</span></a>
-  <nav class="nav" aria-label="ניווט ראשי"><a href="#how">איך זה עובד</a><a href="#approvals">אישורים</a><a href="#hive">יכולות</a><a href="#safety">בטיחות</a><a href="#faq">שאלות</a></nav>
-  <span class="spacer"></span>
-  <a class="lang" href="/en/" hreflang="en" lang="en">English</a>
-  <a class="btn btn-sm btn-amber" href="#download">הורדה</a>
-</div></header>
-<main id="main">
-<section class="hero" data-hero>
-  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
-  <canvas class="hive" data-hive data-tasks="[[&quot;מסכם פגישה&quot;,&quot;#f472b6&quot;],[&quot;שולח מייל · מחכה לאישור&quot;,&quot;#f5b70a&quot;,1],[&quot;מחקר מעמיק&quot;,&quot;#a78bfa&quot;],[&quot;ממלא טופס באתר&quot;,&quot;#2dd4bf&quot;],[&quot;מכין מצגת&quot;,&quot;#4ade80&quot;],[&quot;תזכורת קבועה · 08:00&quot;,&quot;#f472b6&quot;],[&quot;קורא את המיילים&quot;,&quot;#2dd4bf&quot;],[&quot;מתקשר למסעדה · מחכה לאישור&quot;,&quot;#a78bfa&quot;,1]]" aria-hidden="true"></canvas>
-  <div class="hero-veil" aria-hidden="true"></div>
-  <div class="wrap hero-copy" data-hero-copy>
-    <p class="eyebrow"><span class="pulse" aria-hidden="true"></span>גרסת בודקים 2.30.3 · קוד פתוח · רץ על המחשב שלך</p>
-    <h1>צוות AI אישי.<br><span class="grad">על המנויים שכבר יש לך.</span></h1>
-    <p class="lede">כוורת היא אפליקציה למחשב שמריצה צוות Bots אישי על Claude,&rlm; ChatGPT,&rlm; Grok או מודלים מקומיים. הם גולשים, עובדים עם קבצים, שולחים הודעות ומיילים ומריצים משימות קבועות, ועוצרים לבקש אישור לפני כל דבר רגיש.</p>
-    <div class="cta-row"><a class="btn btn-primary btn-lg" data-dl="primary" href="https://github.com/OrielGer/kaveret-download/releases/download/v2.30.3/Kaveret-Setup-2.30.3.exe" rel="noopener" data-label-win="הורדה ל־Windows" data-label-android="הורדה ל־Android" data-label-all="לכל ההורדות"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg><span data-dl-label>הורדה ל־Windows</span></a><a class="btn btn-ghost btn-lg" href="#how">איך זה עובד</a></div>
-    <p class="dl-note" data-dl-note data-note-win="Windows 10/11 · 128 MB · הקובץ עוד לא חתום: אם מופיע ⁦&quot;Windows protected your PC&quot;⁩, לוחצים ⁦More info → Run anyway⁩" data-note-android="Android · ניסיוני · מתחבר לכוורת שבמחשב שלך" data-note-other="Windows ו־Android לבודקים · גרסה ל־Mac בקרוב">Windows 10/11 · 128 MB · הקובץ עוד לא חתום: אם מופיע ⁦&quot;Windows protected your PC&quot;⁩, לוחצים ⁦More info → Run anyway⁩</p>
-  </div>
-  <a class="scroll-cue" href="#proof" aria-label="איך זה עובד"><span aria-hidden="true"></span></a>
-</section>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-<section class="proof" id="proof">
+<header class="top">
   <div class="wrap">
-    <div class="stage" data-stage>
-      <div class="stage-glow" aria-hidden="true"></div>
-      <figure class="dev-win"><div class="xfade"><img src="/assets/img/hero-chat-he-1000.webp" srcset="/assets/img/hero-chat-he-1000.webp 1000w, /assets/img/hero-chat-he-1600.webp 1600w" sizes="(min-width: 1240px) 1180px, 92vw" width="1600" height="1029" alt="כוורת במחשב: שיחה עם ה־Bot הראשי, ורשימת ה־Bots בצד (נתוני הדגמה)" decoding="async" fetchpriority="high"><img class="next" src="/assets/img/hero-he-1000.webp" srcset="/assets/img/hero-he-1000.webp 1000w, /assets/img/hero-he-1600.webp 1600w" sizes="(min-width: 1240px) 1180px, 92vw" width="1600" height="1029" alt="כוורת במחשב: ה־Bot מבקש אישור לפני שליחת מייל, בכרטיס עם &quot;אישור הפעם&quot; ו&quot;לא הפעם&quot; (נתוני הדגמה)" decoding="async"></div></figure>
-      <figure class="dev-phone"><img src="/assets/img/phone-list-he-390.webp" srcset="/assets/img/phone-list-he-390.webp 390w, /assets/img/phone-list-he-600.webp 600w" sizes="(min-width: 1100px) 230px, 26vw" width="390" height="844" alt="כוורת בטלפון: רשימת ה־Bots (נתוני הדגמה)" decoding="async"></figure>
-      <div class="toast" aria-hidden="true"><div class="toast-h"><img src="/assets/logo.svg" width="18" height="18" alt=""><span>כוורת · עכשיו</span></div><b>לאפשר ל־כוורת לשלוח אימייל?</b><div class="toast-b"><span class="ok">אישור הפעם</span><span>לא הפעם</span></div></div>
+    <a class="brand" href="./" aria-label="Kaveret, home">
+      <img src="assets/icon.svg" width="32" height="32" alt="">
+      <span>Kaveret</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#can-do">What it can do</a>
+      <a href="#approvals">Approvals</a>
+      <a href="#download">Download</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="top-actions">
+      <a class="lang" href="he/" hreflang="he" lang="he" aria-label="עברית (Hebrew)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg>
+        עברית
+      </a>
+      <a class="btn btn-primary btn-sm" href="#download" data-dl="releases"><span data-soon="Sunday 15.11">Download</span></a>
     </div>
-    <p class="caption">צילומי מסך אמיתיים מהאפליקציה, עם נתוני הדגמה.</p>
-    <div class="works rv"><p>עובד עם המנויים שכבר יש לך</p><ul role="list"><li>Claude</li><li>ChatGPT (Codex)</li><li>Grok</li><li>מודלים מקומיים (Ollama)</li></ul></div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <p class="pill"><b>New</b> Open source · Windows, with Mac and phone in beta</p>
+    <h1 id="hero-title"><span class="line">Your own <span class="hl">AI team</span>.</span> <span class="line">No developer needed.</span></h1>
+    <p class="lede">Kaveret turns the AI subscriptions you already pay for into a team of bots that work for you, on your computer. Install it, connect your account, and tell Buddy, your main bot, what you need in plain words.</p>
+    <div class="cta">
+      <a class="btn btn-primary btn-lg" href="#download" data-dl="releases">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+        <span data-soon="Coming Sunday 15.11">Download for Windows</span>
+      </a>
+      <a class="link" href="#download">Mac, Android and iPhone</a>
+    </div>
+    <p class="cta-note">Uses your own subscriptions, under each company's terms.</p>
+
+    <figure class="stage">
+      <div class="window">
+        <picture>
+          <source media="(max-width: 600px) and (prefers-color-scheme: dark)" type="image/webp" srcset="assets/img/team-phone-en-dark-390.webp" width="390" height="844">
+          <source media="(max-width: 600px)" type="image/webp" srcset="assets/img/team-phone-en-light-390.webp" width="390" height="844">
+          <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="assets/img/team-en-dark-1920.webp 1920w, assets/img/team-en-dark-1440.webp 1440w, assets/img/team-en-dark-960.webp 960w, assets/img/team-en-dark-640.webp 640w" sizes="(max-width: 1240px) calc(100vw - 40px), 1160px">
+          <img src="assets/img/team-en-light-1440.webp" srcset="assets/img/team-en-light-1920.webp 1920w, assets/img/team-en-light-1440.webp 1440w, assets/img/team-en-light-960.webp 960w, assets/img/team-en-light-640.webp 640w" sizes="(max-width: 1240px) calc(100vw - 40px), 1160px" width="1920" height="1080" fetchpriority="high" alt="The Kaveret app. On the left, a team of bots: Buddy, Researcher, Inbox Helper, Trip Planner, Home and Bills, and Deal Watcher. In the chat, Buddy reports what the team did overnight, then creates a Deal Watcher bot on ChatGPT to watch laptop prices and sets a Sunday reminder.">
+        </picture>
+      </div>
+      <figcaption>The real app, with demo data: Buddy, your main bot, sets up a new bot for the job.</figcaption>
+    </figure>
+
+    <div class="engines" aria-label="Works with">
+      <span class="lbl">Works with the subscriptions you already have</span>
+      <span class="chip"><i class="e-claude"></i>Claude</span>
+      <span class="chip"><i class="e-chatgpt"></i>ChatGPT</span>
+      <span class="chip"><i class="e-grok"></i>Grok</span>
+      <span class="chip"><i class="e-gemini"></i>Gemini<span class="star" aria-hidden="true">*</span></span>
+      <span class="chip"><i class="e-ollama"></i>Ollama, on your computer</span>
+      <span class="lbl fine-lbl"><span aria-hidden="true">*</span>Gemini connects with a Google AI Studio API key, which Google bills separately.</span>
+    </div>
   </div>
 </section>
 
-<section class="sec" id="how">
+<!-- ============ THREE STEPS ============ -->
+<section class="sec" id="how" aria-labelledby="how-title">
   <div class="wrap">
-    <div class="sec-head rv"><p class="kicker">איך זה עובד</p><h2>שלושה צעדים, והצוות שלך עובד.</h2><p class="sub">בלי שרת, בלי חשבון חדש ובלי מפתחות. הכל רץ על המחשב שלך.</p></div>
-    <ol class="steps" role="list">
-      <li class="step rv"><span class="num" aria-hidden="true">01</span><h3>מתקינים</h3><p>מורידים ומתקינים. בהפעלה הראשונה הכל רץ על המחשב הזה: בלי שרת, בלי סיסמה, וה־Bot הראשי, באדי הדבורה, כבר מוכן.</p>
-        <div class="chips"><span class="chip">Windows</span><span class="chip">Android · ניסיוני</span><span class="chip">Mac · בקרוב</span></div></li>
-      <li class="step rv"><span class="num" aria-hidden="true">02</span><h3>כוורת מוצאת את המנויים שלך</h3><p>אשף הפתיחה בודק אילו כלים רשמיים של מנועי AI כבר מותקנים ומחוברים במחשב, ומסמן מה מוכן. מה שעוד חסר, מתקינים ומתחברים בחלון של הכלי עצמו.</p>
-        <div class="shot"><img src="/assets/img/wizard-he-680.webp" srcset="/assets/img/wizard-he-680.webp 680w, /assets/img/wizard-he-1100.webp 1100w" sizes="(min-width: 1081px) 560px, (min-width: 700px) 46vw, 88vw" width="1100" height="760" alt="אשף הפתיחה של כוורת: &quot;אילו מנויים יש לך?&quot; עם Claude Code, ‏ChatGPT (Codex) ו־Grok מסומנים &quot;מוכן&quot; (נתוני הדגמה)" loading="lazy" decoding="async"></div></li>
-      <li class="step rv"><span class="num" aria-hidden="true">03</span><h3>יוצרים Bots ומדברים איתם</h3><p>לכל Bot שם, מראה, תפקיד ומודל משלו. מדברים איתם מהמחשב או מהטלפון, ומאשרים פעולות גם מההתראה.</p>
-        <div class="chips"><span class="chip">Bot למחקר</span><span class="chip">Bot לקניות</span><span class="chip">Bot ליומן</span></div></li>
+    <div class="head center reveal">
+      <span class="eyebrow">How it works</span>
+      <h2 id="how-title">Three steps to your first result</h2>
+    </div>
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="n" aria-hidden="true">1</span>
+        <h3>Install Kaveret</h3>
+        <p>Download the installer and run it. Windows asks once because the app is new; below we show exactly what to click.</p>
+        <span class="step-line" aria-hidden="true"></span>
+      </li>
+      <li class="step reveal">
+        <span class="n" aria-hidden="true">2</span>
+        <h3>Connect what you pay for</h3>
+        <p>Pick Claude, ChatGPT or Grok. On Windows, one click installs that company's official tool inside the app. Then you sign in to your own account in its window.</p>
+        <span class="step-line" aria-hidden="true"></span>
+      </li>
+      <li class="step reveal">
+        <span class="n" aria-hidden="true">3</span>
+        <h3>Ask Buddy</h3>
+        <p>Write what you need, the way you would text a friend. Buddy answers, or creates a new bot for the job and tells you what it did.</p>
+      </li>
     </ol>
   </div>
 </section>
 
-<section class="sec" id="approvals">
-  <div class="wrap split">
-    <div class="rv">
-      <p class="kicker">כרטיסי אישור</p><h2>שום דבר רגיש לא קורה בלי לשאול אותך.</h2><p class="sub">לפני שליחת מייל או הודעה, שיחת טלפון, פקודת טרמינל או שינוי קבצים מחוץ לתיקייה של ה־Bot, הוא עוצר ומציג כרטיס: משפט אחד שאומר מה עומד לקרות, והפרטים מתחת.</p>
-      <ul class="list"><li><b>אישור הפעם</b> <span>הפעולה הזו בלבד.</span></li><li><b>תמיד בשיחה הזו</b> <span>לפעולות שחוזרות על עצמן. במיילים ובשיחות טלפון אין "תמיד": כל פעם שואלים מחדש.</span></li><li><b>לא הפעם</b> <span>שום דבר לא קורה, וה־Bot ממשיך בלי זה.</span></li><li><b>מכל מקום</b> <span>על כרטיסים רגילים אפשר לענות ישר מההתראה, במחשב או בטלפון.</span></li></ul>
-    </div>
-    <div class="demo rv" data-demo role="region" aria-label="הדגמה חיה של כרטיס אישור" data-short="לשלוח אימייל" data-allowed="אושר" data-denied="נדחה" data-sent="נשלח ✓ הרשימה בדרך ל־family@example.com." data-not-sent="בסדר, לא שלחתי כלום.">
-      <div class="demo-bar"><span class="pill"><img src="/assets/logo.svg" width="20" height="20" alt="">כוורת</span><span class="try">נסו: אשרו או דחו</span></div>
-      <div class="msgs">
-        <div class="msg me">כן, ותשלח את הרשימה במייל ל־family@example.com</div>
-        <div class="msg bot">הכנתי את הרשימה. לפני ששולחים בשמך, צריך את האישור שלך:</div>
+<!-- ============ THREE MESSAGES ============ -->
+<section class="sec sec-alt" aria-label="Why Kaveret">
+  <div class="wrap">
+
+    <article class="feature">
+      <div class="copy reveal">
+        <span class="eyebrow">Easy</span>
+        <h3>You don't need to be a developer</h3>
+        <p>No config files, no server, no code. Kaveret walks you through the setup on screen, and after that you just talk to it.</p>
+        <ul class="ticks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>One click installs the engine.</b> On Windows, Kaveret runs the official installer for you and shows its progress.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>Buddy builds your team.</b> Ask for a bot that watches prices or sorts your email, and Buddy creates it, picks the engine and explains what it will do.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>Apps when you need them.</b> When a task needs your email or calendar, the bot shows a Connect card right in the chat.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>Something not working?</b> Settings › Check that everything works finds the problem and takes you to the screen that fixes it.</span></li>
+        </ul>
       </div>
-      <template><div class="perm" role="group" aria-label="לאפשר ל־כוורת לשלוח אימייל?" tabindex="-1">
-        <div class="perm-head"><span class="perm-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/></svg></span><div><div class="perm-title">לאפשר ל־כוורת לשלוח אימייל?</div><div class="perm-sub">לשלוח אימייל · במחשב</div></div></div>
-        <span class="risk">פנייה לאנשים</span>
-        <details><summary>פרטים</summary><dl class="kvs"><div><dt>אל</dt><dd dir="ltr">family@example.com</dd></div><div><dt>נושא</dt><dd>רשימת קניות לשקשוקה</dd></div><div><dt>תוכן</dt><dd>ביצים, 4 עגבניות, פלפל אדום, בצל, שום ופטרוזיליה.</dd></div></dl></details>
-        <div class="perm-actions"><button type="button" class="b-allow" data-decision="allow">אישור הפעם</button><button type="button" class="b-deny" data-decision="deny">לא הפעם<kbd aria-hidden="true">Esc</kbd></button></div>
-      </div></template>
-      <div class="demo-foot"><p>הדגמה בדף: שום מייל לא נשלח. הנוסח לקוח מהאפליקציה.</p><button type="button" class="linkbtn" data-reset hidden>להתחיל שוב</button></div>
-      <p class="sr-only" aria-live="polite" data-live></p>
-    </div>
+      <figure class="shot reveal">
+        <div class="window">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="assets/img/connect-en-dark-1366.webp 1366w, assets/img/connect-en-dark-960.webp 960w, assets/img/connect-en-dark-640.webp 640w" sizes="(max-width: 900px) calc(100vw - 40px), 640px">
+            <img src="assets/img/connect-en-light-960.webp" srcset="assets/img/connect-en-light-1366.webp 1366w, assets/img/connect-en-light-960.webp 960w, assets/img/connect-en-light-640.webp 640w" sizes="(max-width: 900px) calc(100vw - 40px), 640px" width="1366" height="768" loading="lazy" decoding="async" alt="Kaveret's first screen: Buddy says hello and offers ideas to start with. Beside the chat, a panel asks which subscriptions you have: Claude Code is ready, ChatGPT has an Open installation button, and Grok has an Open a sign-in window button.">
+          </picture>
+        </div>
+        <figcaption>The first screen: Buddy's chat, with your subscriptions beside it.</figcaption>
+      </figure>
+    </article>
+
+    <article class="feature flip">
+      <div class="copy reveal">
+        <span class="eyebrow">Your subscriptions</span>
+        <h3>Everything you pay for, working as one team. No API bills.</h3>
+        <p>Claude, ChatGPT and Grok each run on your own subscription, through that company's official tool, signed in by you. Give every bot the engine that suits it.</p>
+        <ul class="ticks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>Mix engines in one team.</b> Each bot uses its own engine, and up to six bots can talk in one group chat.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>Hit a usage limit?</b> Move the bot to another engine in one click, or let it carry on automatically with another company's engine.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>See what you've used.</b> How much of each plan is gone, with a heads-up at 80%.</span></li>
+        </ul>
+      </div>
+      <figure class="shot shot-inset reveal">
+        <div class="stack">
+        <div class="window">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="assets/img/engines-en-dark-1110.webp 1110w, assets/img/engines-en-dark-760.webp 760w" sizes="(max-width: 900px) calc(100vw - 40px), 640px">
+            <img src="assets/img/engines-en-light-760.webp" srcset="assets/img/engines-en-light-1110.webp 1110w, assets/img/engines-en-light-760.webp 760w" sizes="(max-width: 900px) calc(100vw - 40px), 640px" width="1110" height="768" loading="lazy" decoding="async" alt="Settings, Engines: Claude Code connected on a Pro plan, ChatGPT connected on Plus, Grok connected on SuperGrok, and Gemini connected with an API key.">
+          </picture>
+        </div>
+        <div class="window inset">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="assets/img/limit-en-dark-630.webp">
+            <img src="assets/img/limit-en-light-630.webp" width="630" height="152" loading="lazy" decoding="async" alt="A usage-limit card in a chat: You've reached your Claude usage limit. Buttons: Move Researcher to ChatGPT, Move Researcher to Grok, and Remind me when it resets.">
+          </picture>
+        </div>
+        </div>
+        <figcaption>Settings › Engines, and the card you see when a plan runs out.</figcaption>
+      </figure>
+    </article>
+
+    <article class="feature">
+      <div class="copy reveal">
+        <span class="eyebrow">Trust</span>
+        <h3>It asks before it acts</h3>
+        <p>A new bot shows you a card and waits for your OK before it changes a file, runs a command that changes something, sends a message or spends money. You decide what it may do from then on.</p>
+        <ul class="ticks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>Outside content can't make it act quietly.</b> After a bot reads a web page, an email or someone else's message, every action in that chat needs a fresh OK, and passwords and secrets are held back.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>The big things come to you.</b> In the recommended setting, payments, passwords, messages to other people, installs and system changes always ask, even when routine steps run on their own.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>Undo.</b> See what a bot changed in its own folder, and undo it in one click.</span></li>
+        </ul>
+      </div>
+      <figure class="shot reveal">
+        <div class="window">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="assets/img/approve-en-dark-884.webp 884w, assets/img/approve-en-dark-640.webp 640w" sizes="(max-width: 900px) calc(100vw - 40px), 640px">
+            <img src="assets/img/approve-en-light-640.webp" srcset="assets/img/approve-en-light-884.webp 884w, assets/img/approve-en-light-640.webp 640w" sizes="(max-width: 900px) calc(100vw - 40px), 640px" width="884" height="500" loading="lazy" decoding="async" alt="An approval card: Allow Inbox Helper to create or change a file? It shows the exact lines it will write to Home/plumber-quote.md, with the buttons Allow once, Always in this chat, Don't ask about this again, and Not this time.">
+          </picture>
+        </div>
+        <figcaption>An approval card shows exactly what will change.</figcaption>
+      </figure>
+    </article>
+
   </div>
 </section>
 
-<section class="sec" id="hive">
-  <div class="wrap hive-wrap">
-    <div class="hive-copy rv">
-      <p class="kicker">יכולות</p><h2>כוורת שלמה של יכולות.</h2><p class="sub">כל תא הוא משהו שה־Bots שלך יודעים לעשות. רחפו מעל תא, או הקישו עליו.</p>
-      <div class="readout" data-readout aria-hidden="true"><span class="ro-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l3.5 2v4L12 11.5l-3.5-2v-4zM7 12l3.5 2v4L7 20l-3.5-2v-4zM17 12l3.5 2v4L17 20l-3.5-2v-4z"/></svg></span><h3 data-ro-h>צוות Bots</h3><p data-ro-p>לכל Bot שם, מראה, תפקיד ומודל משלו. ה־Bot הראשי מתאם ומדווח.</p></div>
-    </div>
-    <ul class="comb rv" role="list" data-comb><li class="cell on" tabindex="0"><span class="cell-in"><span class="cell-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l3.5 2v4L12 11.5l-3.5-2v-4zM7 12l3.5 2v4L7 20l-3.5-2v-4zM17 12l3.5 2v4L17 20l-3.5-2v-4z"/></svg></span><h3>צוות Bots</h3><p class="sr-only">לכל Bot שם, מראה, תפקיד ומודל משלו. ה־Bot הראשי מתאם ומדווח.</p></span></li><li class="cell" tabindex="0"><span class="cell-in"><span class="cell-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="M3 9h18M6.5 6.8h.01M9 6.8h.01"/></svg></span><h3>דפדפן אמיתי</h3><p class="sr-only">גולשים, ממלאים טפסים ואוספים מידע, עם צפייה חיה ואפשרות לקחת שליטה.</p></span></li><li class="cell" tabindex="0"><span class="cell-in"><span class="cell-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M9.5 12h6M9.5 15.5h6"/></svg></span><h3>קבצי Office <span class="tag">חדש</span></h3><p class="sr-only">יוצרים, קוראים ועורכים Word, ‏Excel ו־PowerPoint, כולל עברית מימין לשמאל.</p></span></li><li class="cell" tabindex="0"><span class="cell-in"><span class="cell-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></span><h3>שיחות טלפון ו־SMS</h3><p class="sr-only">Bot מתקשר בשבילך במספר Twilio שלך, ואת/ה רואים תמלול חי.</p></span></li><li class="cell" tabindex="0"><span class="cell-in"><span class="cell-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="12" height="12" rx="2"/><path d="M15 10l6-3.5v11L15 14"/></svg></span><h3>רושם הערות לפגישות</h3><p class="sr-only">מצטרף ל־Google Meet, ‏Zoom או Teams וכותב סיכום, החלטות ומשימות.</p></span></li><li class="cell" tabindex="0"><span class="cell-in"><span class="cell-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span><h3>הודעות ומייל</h3><p class="sr-only">WhatsApp,&rlm; Telegram,&rlm; Slack,&rlm; Discord,&rlm; Microsoft Teams,&rlm; iMessage ומייל.</p></span></li><li class="cell" tabindex="0"><span class="cell-in"><span class="cell-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><h3>משימות קבועות</h3><p class="sr-only">תזמונים, מעקב אחרי דפים, וטריגרים מאירועים.</p></span></li><li class="cell" tabindex="0"><span class="cell-in"><span class="cell-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></span><h3>מחקר מעמיק</h3><p class="sr-only">חיפוש במקביל שמפיק דפי סיכום עם מקורות.</p></span></li><li class="cell" tabindex="0"><span class="cell-in"><span class="cell-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0013 0M12 17.5V21"/></svg></span><h3>דיבור בעברית</h3><p class="sr-only">זיהוי דיבור בעברית קודם, בלי רשת, במחשב.</p></span></li><li class="cell" tabindex="0"><span class="cell-in"><span class="cell-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7.5 8.5l2.5 2-2.5 2M12 12.5h4"/></svg></span><h3>מחשב משלו ל־Bot</h3><p class="sr-only">ב־Windows כל Bot יכול לקבל מחשב מבודד, עם דפדפן וטרמינל שאפשר לצפות בהם.</p></span></li><li class="cell" tabindex="0"><span class="cell-in"><span class="cell-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13l-3.5-3.5M20 16H7l3.5 3.5"/></svg></span><h3>המשך במנוע אחר <span class="tag">חדש</span></h3><p class="sr-only">כשמנוע מגיע למגבלה, הבקשה ממשיכה במנוע של ספק אחר שמחובר אצלך. רק אם מפעילים.</p></span></li><li class="cell" tabindex="0"><span class="cell-in"><span class="cell-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M8.5 5.5A3 3 0 005 9a3 3 0 00.5 5.5A3 3 0 009 19h3M15.5 5.5A3 3 0 0119 9a3 3 0 01-.5 5.5A3 3 0 0115 19h-3"/></svg></span><h3>זיכרון ומיומנויות</h3><p class="sr-only">זיכרון שאפשר לראות ולערוך, ומיומנויות שה־Bot לומד.</p></span></li></ul>
-  </div>
-</section>
-
-<section class="sec" id="engines">
-  <div class="wrap split wide-media">
-    <div class="rv">
-      <p class="kicker">מנועים</p><h2>המנויים שלך. ההתחברות שלך.</h2><p class="sub">ה־Bots עובדים דרך הכלי הרשמי של כל מנוע, עם ההתחברות שלך במחשב. לא צריך מפתחות API (אפשר להוסיף אם רוצים). כוורת לא רואה את פרטי ההתחברות שלך ולא מחזיקה חשבון AI של אף אחד.</p>
-      <ul class="list"><li><b>מודל לכל Bot או לכל שיחה</b> <span>ומחליפים באמצע שיחה: ההקשר נשמר.</span></li><li><b>שיחה קבוצתית</b> <span>כמה Bots, גם על מנועים שונים, באותה שיחה.</span></li><li><b>נגמרה המכסה?</b> <span>אפשר להפעיל המשך אוטומטי במנוע של ספק אחר שמחובר אצלך. כבוי כברירת מחדל, ולעולם לא עובר לחשבון אחר של אותו ספק.</span></li><li><b>רואים הכל במקום אחד</b> <span>הגדרות ← מנועים מראה כל מנוע: מחובר, מעודכן, ובאיזו תוכנית.</span></li></ul>
-      <p class="note">כוורת היא פרויקט קוד פתוח עצמאי, ואינה קשורה ל־Anthropic, ‏OpenAI, ‏xAI או Google ואינה ממומנת או מאושרת על ידן.</p>
-    </div>
-    <figure class="frame fade-b rv" data-tilt><img src="/assets/img/engines3-he-800.webp" srcset="/assets/img/engines3-he-800.webp 800w, /assets/img/engines3-he-1200.webp 1200w" sizes="(min-width: 960px) 700px, 92vw" width="1200" height="797" alt="הגדרות ← מנועים בכוורת: Claude Code, ‏ChatGPT (Codex) ו־Grok מחוברים (נתוני הדגמה)" loading="lazy" decoding="async"></figure>
-  </div>
-</section>
-
-<section class="sec" id="apps">
+<!-- ============ WHAT IT CAN DO ============ -->
+<section class="sec" id="can-do" aria-labelledby="can-title">
   <div class="wrap">
-    <div class="sec-head rv"><p class="kicker">חיבורים</p><h2>מתחברים לאפליקציות שלך בלחיצה.</h2><p class="sub">כל אחת מ־20 האפליקציות האלה מתחברת מתוך כוורת בכמה לחיצות. כשצריך להתחבר, זה קורה בדף של האפליקציה עצמה, והסיסמה לא עוברת דרך כוורת.</p>
-      <p class="flow" aria-label="חיבור → המשך → התחברות ואישור אצל האפליקציה"><span class="k">חיבור</span><span class="arr" aria-hidden="true">→</span><span class="k">המשך</span><span class="arr" aria-hidden="true">→</span><span>התחברות ואישור אצל האפליקציה</span></p></div>
-  </div>
-  <div class="marquee rv" data-marquee>
-    <div class="mq-row"><ul class="mq-track" role="list"><li class="app" lang="en" dir="ltr">Notion</li><li class="app" lang="en" dir="ltr">Linear</li><li class="app" lang="en" dir="ltr">Jira + Confluence</li><li class="app" lang="en" dir="ltr">Dropbox</li><li class="app" lang="en" dir="ltr">Zapier</li><li class="app" lang="en" dir="ltr">Todoist</li><li class="app" lang="en" dir="ltr">Granola</li><li class="app" lang="en" dir="ltr">monday.com</li><li class="app" lang="en" dir="ltr">ClickUp</li><li class="app" lang="en" dir="ltr">Miro</li></ul><ul class="mq-track" aria-hidden="true"><li class="app" lang="en" dir="ltr">Notion</li><li class="app" lang="en" dir="ltr">Linear</li><li class="app" lang="en" dir="ltr">Jira + Confluence</li><li class="app" lang="en" dir="ltr">Dropbox</li><li class="app" lang="en" dir="ltr">Zapier</li><li class="app" lang="en" dir="ltr">Todoist</li><li class="app" lang="en" dir="ltr">Granola</li><li class="app" lang="en" dir="ltr">monday.com</li><li class="app" lang="en" dir="ltr">ClickUp</li><li class="app" lang="en" dir="ltr">Miro</li></ul></div>
-    <div class="mq-row rev"><ul class="mq-track" role="list"><li class="app" lang="en" dir="ltr">GitLab</li><li class="app" lang="en" dir="ltr">Sentry</li><li class="app" lang="en" dir="ltr">Cloudflare</li><li class="app" lang="en" dir="ltr">Supabase</li><li class="app" lang="en" dir="ltr">Airtable</li><li class="app" lang="en" dir="ltr">Wix</li><li class="app" lang="en" dir="ltr">Stripe</li><li class="app" lang="en" dir="ltr">PayPal</li><li class="app" lang="en" dir="ltr">Intercom</li><li class="app" lang="en" dir="ltr">Cloudflare Docs</li></ul><ul class="mq-track" aria-hidden="true"><li class="app" lang="en" dir="ltr">GitLab</li><li class="app" lang="en" dir="ltr">Sentry</li><li class="app" lang="en" dir="ltr">Cloudflare</li><li class="app" lang="en" dir="ltr">Supabase</li><li class="app" lang="en" dir="ltr">Airtable</li><li class="app" lang="en" dir="ltr">Wix</li><li class="app" lang="en" dir="ltr">Stripe</li><li class="app" lang="en" dir="ltr">PayPal</li><li class="app" lang="en" dir="ltr">Intercom</li><li class="app" lang="en" dir="ltr">Cloudflare Docs</li></ul></div>
-  </div>
-  <div class="wrap"><p class="note center">אפליקציות נוספות, כמו Gmail, ‏Slack ו־GitHub, מתחברות בהגדרה מודרכת. שמות האפליקציות שייכים לבעליהן.</p></div>
-</section>
-
-<section class="sec" id="phone">
-  <div class="wrap split">
-    <div class="rv">
-      <p class="kicker">בטלפון</p><h2>ה־Bots שלך בכיס, בלי שרת.</h2><p class="sub">המחשב נשאר הבית של ה־Bots, והטלפון מגיע אליו באופן פרטי דרך Tailscale: בלי פתיחת פורטים ובלי הגדרות בנתב.</p>
-      <ol class="list num"><li><b>מתקינים Tailscale</b> <span>במחשב ובטלפון, ונכנסים לאותו חשבון בשניהם.</span></li><li><b>מפעילים בכוורת</b> <span>הגדרות ← מכשירים ← גישה מהטלפון ומחשבים נוספים.</span></li><li><b>סורקים את קוד ה־QR</b> <span>כוורת נפתחת בטלפון ומתחברת. אפשר להתקין אותה כאפליקציה (PWA) או באפליקציית Android הניסיונית, עם התראות.</span></li></ol>
-      <p class="note">כשהמחשב כבוי או ישן, הטלפון לא מגיע ל־Bots. רוצים זמינות מלאה? אפשר להריץ שרת משלכם.</p>
+    <div class="head reveal">
+      <span class="eyebrow">What it can do</span>
+      <h2 id="can-title">Less busywork, at home and at work</h2>
+      <p>Tell a bot the result you want. Here are a few things people hand over first.</p>
     </div>
-    <div class="phones rv" data-phones>
-      <figure class="dev-phone p1"><img src="/assets/img/phone-card-he-390.webp" srcset="/assets/img/phone-card-he-390.webp 390w, /assets/img/phone-card-he-600.webp 600w" sizes="(min-width: 960px) 280px, 42vw" width="390" height="844" alt="כוורת בטלפון: כרטיס אישור לשליחת מייל (נתוני הדגמה)" loading="lazy" decoding="async"></figure>
-      <figure class="dev-phone p2"><img src="/assets/img/phone-list-he-390.webp" srcset="/assets/img/phone-list-he-390.webp 390w, /assets/img/phone-list-he-600.webp 600w" sizes="(min-width: 960px) 280px, 42vw" width="390" height="844" alt="כוורת בטלפון: רשימת ה־Bots (נתוני הדגמה)" loading="lazy" decoding="async"></figure>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="safety">
-  <div class="wrap">
-    <div class="sec-head rv"><p class="kicker">בטיחות ופרטיות</p><h2>שלך. במחשב שלך. באישור שלך.</h2><p class="sub">אין ענן של כוורת ואין טלמטריה. הצ'אטים, הקבצים והכספת נשארים במחשב שלך, וההודעות נשלחות רק למנוע שבחרת.</p></div>
-    <div class="cards"><div class="card rv"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span><h3>רץ על המחשב שלך</h3><p>הכל נשמר אצלך (או בשרת שלך, אם בוחרים). האפליקציה בודקת עדכונים ב־GitHub Releases, וזהו.</p></div><div class="card rv"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/></svg></span><h3>כרטיסי אישור</h3><p>פעולה משמעותית עוצרת לכרטיס. לכל Bot בוחרים כמה מותר לו לבד: לשאול תמיד, בדיקה אוטומטית או גישה מלאה.</p></div><div class="card rv"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M6 6l12 12"/></svg></span><h3>תוכן מבחוץ הוא מידע, לא הוראות</h3><p>הודעות, מיילים, דפי אינטרנט ו־Webhooks לא יכולים לאשר כלום. תור שקרא אותם לא מקבל אישור אוטומטי, וזרים בערוצים חיצוניים לא מגיעים ל־Bot.</p></div><div class="card rv"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l8-8M16 7l2 2M14 9l2 2"/></svg></span><h3>כספת מוצפנת</h3><p>סיסמאות וטוקנים בכספת מוצפנת (AES-256-GCM). כשה־Bot נכנס לאתר, האפליקציה מקלידה את הערך לדף, והמודל לא רואה אותו.</p></div><div class="card rv"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6z"/><path d="M4 20L20 4"/></svg></span><h3>הסתרה</h3><p>סודות מוסתרים בצ'אטים, בזרימה ובלוגים.</p></div><div class="card rv"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18"/></svg></span><h3>תשלום תמיד שואל</h3><p>תשלום או רכישה דורשים תמיד אישור מפורש שלך, ואפשר לקבוע מגבלות הוצאה.</p></div></div>
-    <div class="split wide-media safety-shot">
-      <div class="rv"><h3 class="h3-lg">גישה מלאה, עם גבולות</h3><p class="sub">אפשר לתת ל־Bot מהימן לדלג על שאלות שגרתיות. מה שתמיד מחכה לאישור שלך:</p><ul class="hard" role="list"><li>תשלומים וקניות</li><li>הקלדת סוד באתר חדש</li><li>חשיפת סוד</li><li>הודעה, שיחה או מייל למישהו שאינו את/ה</li><li>מחיקה או שינוי קבצים מחוץ לתיקייה של ה־Bot</li><li>התקנת תוכנה</li><li>שינוי הגדרות מערכת</li><li>כל דבר בלתי הפיך או שעולה כסף</li></ul></div>
-      <figure class="frame rv" data-tilt><img src="/assets/img/safety-he-800.webp" srcset="/assets/img/safety-he-800.webp 800w, /assets/img/safety-he-1200.webp 1200w" sizes="(min-width: 960px) 640px, 92vw" width="1200" height="1088" alt="הגדרות ← בטיחות ואישורים בכוורת, עם הרשימה &quot;תמיד מחכה לאישור שלך&quot; (נתוני הדגמה)" loading="lazy" decoding="async"></figure>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="download">
-  <div class="wrap">
-    <div class="sec-head center rv"><p class="kicker">הורדה</p><h2>מצטרפים לבודקים.</h2><p class="sub">גרסה 2.30.3 לבודקים. קבצי ההתקנה מתארחים ב־GitHub Releases.</p></div>
-    <div class="dls">
-      <article class="dl-card rv" data-os="win">
-        <span class="rec">מתאים למכשיר הזה</span>
-        <div class="dl-top"><span class="dl-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span><div><h3>Windows</h3><p>Windows 10 / 11 · קובץ התקנה</p></div></div>
-        <a class="btn btn-primary" data-dl="win" href="https://github.com/OrielGer/kaveret-download/releases/download/v2.30.3/Kaveret-Setup-2.30.3.exe" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>הורדה ל־Windows</a>
-        <p class="dl-meta" data-dl-meta="win">גרסה 2.30.3 · 128 MB</p>
-        <div class="dl-how"><p>התקנה ראשונה (הקובץ עוד לא חתום בתעודה מסחרית):</p><ol><li>פותחים את הקובץ שהורד.</li><li>אם מופיע "Windows protected your PC", לוחצים <b dir="ltr">More info</b>.</li><li>לוחצים <b dir="ltr">Run anyway</b>, ואשף ההתקנה מתחיל.</li></ol></div>
+    <div class="outcomes">
+      <article class="oc reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l6 6 4-4 8 8"/><path d="M15 17h6v-6"/></svg></span>
+        <h3>Know when the price drops</h3>
+        <p>A bot watches the product pages you care about and tells you when a price falls, a slot opens or a page changes.</p>
+        <span class="who">At home</span>
       </article>
-      <article class="dl-card rv" data-os="android">
-        <span class="rec">מתאים למכשיר הזה</span>
-        <div class="dl-top"><span class="dl-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><div><h3>Android <span class="tag">ניסיוני</span></h3><p>האפליקציה לטלפון מתחברת לכוורת שבמחשב שלך — מתקינים קודם על המחשב, והטלפון מתחבר אליו דרך Tailscale (חינם).</p></div></div>
-        <a class="btn btn-ghost" data-dl="android" href="https://github.com/OrielGer/kaveret-download/releases/download/v2.30.3/Kaveret-2.30.3-android.apk" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>הורדת APK</a>
-        <p class="dl-meta" data-dl-meta="android">גרסה 2.30.3 · APK</p>
-        <div class="dl-how"><p>התקנה:</p><ol><li>פותחים את הקובץ בטלפון.</li><li>כשמתבקשים, מאשרים התקנה מהמקור הזה ואז Install.</li><li>בהפעלה הראשונה מזינים את הכתובת שכוורת מציגה במחשב.</li></ol></div>
+      <article class="oc reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+        <h3>Answers that wait for you</h3>
+        <p>It reads your inbox and writes replies for you. They wait as drafts until you press Send, unless you've told it a recipient is fine.</p>
+        <span class="who">Small business</span>
       </article>
-      <article class="dl-card rv is-soon" data-os="mac">
-        <span class="rec">מתאים למכשיר הזה</span>
-        <div class="dl-top"><span class="dl-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="10" rx="1.5"/><path d="M3 19h18"/></svg></span><div><h3>Mac <span class="tag soon" data-mac-badge>בקרוב</span></h3><p>גרסה ל־Mac בדרך. בינתיים אפשר להשתמש בכוורת מהטלפון מול מחשב Windows.</p></div></div>
-        <span class="btn btn-ghost is-off" data-dl="mac" data-label-mac="הורדה ל־Mac" aria-disabled="true">בקרוב</span>
+      <article class="oc reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg></span>
+        <h3>Notes from every meeting</h3>
+        <p>Once you approve, it joins your Zoom, Google Meet or Teams call and sends you the summary, decisions and to-dos.</p>
+        <span class="who">Small business</span>
+      </article>
+      <article class="oc reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></span>
+        <h3>Compare before you pay</h3>
+        <p>Insurance, suppliers, a new laptop: deep research reads at least five sources and gives you an answer with the links.</p>
+        <span class="who">At home</span>
+      </article>
+      <article class="oc reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="7.5"/><path d="M12 9.5V13l2.5 2M5 4 2.5 6.5M19 4l2.5 2.5"/></svg></span>
+        <h3>Routines that run themselves</h3>
+        <p>A morning summary, a weekly look at the bills, a reminder on Sunday. Say it once in plain words.</p>
+        <span class="who">At home</span>
+      </article>
+      <article class="oc reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span>
+        <h3>Reach it from your phone</h3>
+        <p>Talk to your bots on Telegram, or in the Kaveret app on your phone, while your computer is on.</p>
+        <span class="who">Everyone</span>
       </article>
     </div>
-    <p class="note center">הקוד פתוח (MIT). <a href="https://github.com/OrielGer/kaveret" data-gh hidden>קוד המקור ב־GitHub</a></p>
+    <p class="fine reveal">Some of these need a one-time connection: your email account, a Telegram bot or a meeting link. Phone calls and text messages need your own Twilio account.</p>
   </div>
 </section>
 
-<section class="sec" id="faq">
-  <div class="wrap narrow">
-    <div class="sec-head center rv"><p class="kicker">יש שאלות?</p><h2>שאלות נפוצות</h2></div>
-    <div class="faq"><details class="rv"><summary>זה בחינם?</summary><div class="a"><p>האפליקציה בקוד פתוח ברישיון MIT. משתמשים במנויים שלך (או במודלים מקומיים חינמיים); שיחות טלפון (Twilio) ושרת משלך עולים מה שהשירותים האלה גובים.</p></div></details><details class="rv"><summary>המידע שלי עובר לשרת של כוורת?</summary><div class="a"><p>לא. אין ענן של כוורת ואין טלמטריה. הצ'אטים, הקבצים והכספת נשארים במחשב שלך (או בשרת שלך). ההודעות שלך נשלחות למנוע שבחרת, כמו באפליקציה של המנוע עצמו; האפליקציה גם בודקת עדכונים ב־GitHub Releases.</p></div></details><details class="rv"><summary>כוורת מחזיקה את חשבון ה־AI שלי?</summary><div class="a"><p>לא. כל מנוע רץ דרך הכלי הרשמי שלו, עם התחברות שעשית בעצמך במחשב. כוורת לא רואה את פרטי ההתחברות ולא מחליפה חשבונות לבד.</p></div></details><details class="rv"><summary>אילו מנועים נתמכים?</summary><div class="a"><p>Claude,&rlm; ChatGPT (Codex),&rlm; Grok, מודלים מקומיים (Ollama) וסוכני ACP נוספים.</p></div></details><details class="rv"><summary>על אילו מכשירים זה עובד?</summary><div class="a"><p>ל־Windows 10/11 יש קובץ התקנה (גרסת בודקים). גרסה ל־Mac בקרוב. בטלפון: אפליקציית Android ניסיונית או PWA, שמתחברות לכוורת שבמחשב שלך. הממשק בעברית, באנגלית ובשפות נוספות.</p></div></details><details class="rv"><summary>למה Windows מציג אזהרה בהתקנה?</summary><div class="a"><p>קובץ ההתקנה עוד לא חתום בתעודה מסחרית, ולכן SmartScreen עשוי להציג "Windows protected your PC". לוחצים "More info" ואז "Run anyway".</p></div></details><details class="rv"><summary>עובד בלי אינטרנט?</summary><div class="a"><p>עם מודלים מקומיים (Ollama) ה־Bots עובדים בלי אינטרנט; כלים שצריכים רשת (גלישה, מייל, טלפון) לא.</p></div></details></div>
-  </div>
-</section>
-
-<section class="final" data-final>
-  <div class="final-hex" aria-hidden="true"></div>
+<!-- ============ APPROVALS ============ -->
+<section class="sec sec-alt" id="approvals" aria-labelledby="ap-title">
   <div class="wrap">
-    <img class="logo" src="/assets/logo.svg" width="84" height="84" alt="">
-    <h2>הצוות שלך מחכה.</h2><p class="sub">מתקינים, מחברים מנוי שכבר יש לך, ומתחילים לדבר.</p>
-    <div class="cta-row center"><a class="btn btn-primary btn-lg" data-dl="primary" href="https://github.com/OrielGer/kaveret-download/releases/download/v2.30.3/Kaveret-Setup-2.30.3.exe" rel="noopener" data-label-win="הורדה ל־Windows" data-label-android="הורדה ל־Android" data-label-all="לכל ההורדות"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg><span data-dl-label>הורדה ל־Windows</span></a><a class="btn btn-ghost btn-lg" href="https://github.com/OrielGer/kaveret" data-gh hidden>GitHub</a></div>
-    <p class="dl-note" data-dl-note data-note-win="Windows 10/11 · 128 MB · הקובץ עוד לא חתום: אם מופיע ⁦&quot;Windows protected your PC&quot;⁩, לוחצים ⁦More info → Run anyway⁩" data-note-android="Android · ניסיוני · מתחבר לכוורת שבמחשב שלך" data-note-other="Windows ו־Android לבודקים · גרסה ל־Mac בקרוב">Windows 10/11 · 128 MB · הקובץ עוד לא חתום: אם מופיע ⁦&quot;Windows protected your PC&quot;⁩, לוחצים ⁦More info → Run anyway⁩</p>
+    <div class="head reveal">
+      <span class="eyebrow">How approvals work</span>
+      <h2 id="ap-title">You stay in charge, in plain words</h2>
+      <p>No settings to learn up front. A bot asks, you answer, and you can always change your mind.</p>
+    </div>
+    <div class="approve-grid">
+      <ol class="rules">
+        <li class="rule reveal">
+          <span class="k" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5.5c0 4.4 3 8 7 9.5 4-1.5 7-5.1 7-9.5V6l-7-3Z"/></svg></span>
+          <div>
+            <h3>A card when it matters</h3>
+            <p>Before a bot does something that needs permission, a card says what it wants to do and where. You answer with one tap.</p>
+            <div class="btns-demo" aria-hidden="true"><span class="kbtn on">Allow once</span><span class="kbtn">Always in this chat</span><span class="kbtn">Not this time</span></div>
+          </div>
+        </li>
+        <li class="rule reveal">
+          <span class="k" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg></span>
+          <div>
+            <h3>You set the pace, bot by bot</h3>
+            <p>Each bot has its own approvals setting, from "ask every time" to letting routine steps through. Change it whenever you like.</p>
+          </div>
+        </li>
+        <li class="rule reveal">
+          <span class="k" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg></span>
+          <div>
+            <h3>Outside content is marked</h3>
+            <p>If a bot read a web page, an email or a message from someone else, a globe appears at the top of the chat. From then on, every action needs a fresh OK, and "Always" stays off until you press Mark as safe.</p>
+          </div>
+        </li>
+        <li class="rule reveal">
+          <span class="k" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 1 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9Z"/><path d="M10 20a2.2 2.2 0 0 0 4 0"/></svg></span>
+          <div>
+            <h3>Answer from your phone</h3>
+            <p>Cards reach your phone as notifications. Everyday ones can be approved right there; payments, secrets and chats with outside content open the full card first.</p>
+          </div>
+        </li>
+      </ol>
+      <figure class="shot reveal">
+        <div class="window">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="assets/img/outside-en-dark-884.webp 884w, assets/img/outside-en-dark-640.webp 640w" sizes="(max-width: 900px) calc(100vw - 40px), 560px">
+            <img src="assets/img/outside-en-light-640.webp" srcset="assets/img/outside-en-light-884.webp 884w, assets/img/outside-en-light-640.webp 640w" sizes="(max-width: 900px) calc(100vw - 40px), 560px" width="884" height="500" loading="lazy" decoding="async" alt="The same chat after the bot read an email. A globe at the top explains: Outside content in this chat. So that such content can't act in your name, every action waits for your approval. A Mark as safe button. The approval card now offers only Allow once and Not this time.">
+          </picture>
+        </div>
+        <figcaption>After reading an email: the globe explains why, and the card offers no "Always".</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
+
+<!-- ============ DOWNLOAD ============ -->
+<section class="sec" id="download" aria-labelledby="dl-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Download and install</span>
+      <h2 id="dl-title">Get Kaveret</h2>
+      <p>Kaveret runs on your computer. Your phone reaches it through Tailscale, a free app you install on both.</p>
+      <p class="launch-note" id="launch-note" hidden>Downloads open on Sunday 15.11, with the first public release. Until then the download buttons stay on this page.</p>
+    </div>
+    <div class="dl-grid">
+      <article class="card main reveal" aria-labelledby="win-title">
+        <h3 id="win-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Windows</h3>
+        <p>The installer comes from the project's releases page on GitHub.</p>
+        <a class="btn btn-primary btn-lg" href="#download" data-dl="releases">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+          <span data-soon="Coming Sunday 15.11">Download for Windows</span>
+        </a>
+        <ol class="howto">
+          <li><span>Download <b>Kaveret-Setup-<i>version</i>.exe</b> from the releases page and open it.</span></li>
+          <li><span>Windows shows <b>"Windows protected your PC"</b>. This happens because the app is new and its installer isn't code-signed yet.</span></li>
+          <li><span>Click <span class="kbd">More info</span>, then <span class="kbd">Run anyway</span>.</span></li>
+          <li><span>Finish the setup. Kaveret opens with Buddy, ready to connect your first subscription.</span></li>
+        </ol>
+        <div class="smart">
+          <h4>Want to check the file first?</h4>
+          <p>Every release lists a SHA-256 for each file. The <a class="link" href="#download" data-dl="install">install guide</a> shows the one command to compare them.</p>
+        </div>
+      </article>
+      <article class="card reveal" aria-labelledby="mac-title">
+        <h3 id="mac-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg>Mac <span class="tag">Beta</span></h3>
+        <p>For Apple silicon and Intel. The Mac build isn't notarized by Apple yet, so the first time you open it, right-click Kaveret and choose Open. On macOS 15 or newer, go to System Settings › Privacy &amp; Security › Open Anyway.</p>
+        <a class="btn btn-ghost btn-sm" href="#download" data-dl="releases"><span data-soon="Mac: coming 15.11">Mac downloads</span></a>
+      </article>
+      <article class="card reveal" aria-labelledby="phone-title">
+        <h3 id="phone-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>Phone <span class="tag">Test build</span></h3>
+        <p><b>What you need:</b> Tailscale, a free app, on your computer and on your phone, signed in to the same Tailscale account on both. It lets your phone reach Kaveret privately. In Kaveret, Settings › Devices › Access from your phone and other computers walks you through it and shows a QR code.</p>
+        <p><b>Android:</b> install the test app by hand from the releases page (allow installs from that source when asked), then enter the address shown in Settings › Devices. <b>iPhone:</b> scan the QR code with the camera, then in Safari choose Add to Home Screen.</p>
+        <a class="btn btn-ghost btn-sm" href="phone.html">Phone setup guide</a>
+      </article>
+    </div>
+    <div class="reqs">
+      <p class="req reveal"><b>Your computer stays on</b>Your bots run on your computer. To reach them from your phone, the computer has to be on and awake with Kaveret running.</p>
+      <p class="req reveal"><b>Your subscriptions, their terms</b>Kaveret uses your own accounts through each company's official tool. That company's terms and usage limits apply.</p>
+      <p class="req reveal"><b>Linux</b>Kaveret runs from source on Linux. The <a class="link" href="#download" data-dl="install">install guide</a> has the steps.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPEN SOURCE ============ -->
+<section class="sec sec-tight" aria-labelledby="oss-title">
+  <div class="wrap">
+    <div class="oss reveal">
+      <img src="assets/icon.svg" width="72" height="72" alt="">
+      <div>
+        <h2 id="oss-title">Open source, MIT licence</h2>
+        <p>Every line of Kaveret is public. Read it, build it yourself, or help make it better. The app sends no analytics; updates come from the project's GitHub releases.</p>
+      </div>
+      <a class="btn btn-ghost" href="#download" data-dl="repo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>
+        View the source
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow">Questions</span>
+      <h2 id="faq-title">Good questions</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>What does Kaveret cost?</summary>
+        <div class="a"><p>Kaveret itself is open source under the MIT licence. The AI work runs on the subscriptions you already have with Claude, ChatGPT or Grok, so their plans and limits apply. Gemini uses a Google AI Studio API key, which Google bills.</p></div>
+      </details>
+      <details>
+        <summary>Do I need to be technical?</summary>
+        <div class="a"><p>No. You install it like any other app, connect your subscription from the first screen, and talk to Buddy in plain words. On Windows, Kaveret installs each company's official tool for you with one click.</p></div>
+      </details>
+      <details>
+        <summary>Does my data go to you?</summary>
+        <div class="a"><p>No. Kaveret has no server of its own and the app sends no analytics. Your chats are kept on your computer. Each AI company's tool sends your requests to that company, under its own privacy policy.</p><p>Settings › Data and backups has a page that shows where your data goes. A private chat isn't kept: nothing of it stays on disk after you close it.</p></div>
+      </details>
+      <details>
+        <summary>Can a bot spend my money or message people for me?</summary>
+        <div class="a"><p>In the recommended setting, no. Payments, messages to other people, passwords, installs and system changes come to you as a card, and email replies wait as drafts until you press Send (unless you've allowed that recipient).</p><p>A bot can do more without asking only if you give it full access yourself, in that bot's settings.</p></div>
+      </details>
+      <details>
+        <summary>What happens when I reach a usage limit?</summary>
+        <div class="a"><p>The chat shows when your plan resets and offers to move the bot to another engine you've connected, in one click. You can also let Kaveret carry on with another company's engine by itself.</p></div>
+      </details>
+      <details>
+        <summary>Can I use it from my phone?</summary>
+        <div class="a"><p>Yes, while your computer is on and Kaveret is running. Install Tailscale (free) on your computer and on your phone and sign in to the same account on both. Then Settings › Devices walks you through connecting the phone, in the Android test app or on your iPhone's home screen. The <a class="link" href="phone.html">phone setup guide</a> has the steps. You can also talk to your bots on Telegram.</p></div>
+      </details>
+      <details>
+        <summary>Why does Windows warn me when I install it?</summary>
+        <div class="a"><p>The installer isn't code-signed with a commercial certificate yet, so Windows doesn't recognise it. Click More info, then Run anyway. If you'd like to be sure the file is the one the project published, compare its SHA-256 with the list on the release.</p></div>
+      </details>
+      <details>
+        <summary>Which languages does the app speak?</summary>
+        <div class="a"><p>The app's screens are available in English, Hebrew, Arabic, Russian, Spanish, French, German and Portuguese.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<section class="sec closing" aria-labelledby="end-title">
+  <div class="wrap reveal">
+    <img class="bee" src="assets/icon.svg" width="88" height="88" alt="">
+    <h2 id="end-title">Put your subscriptions to work</h2>
+    <div class="cta">
+      <a class="btn btn-primary btn-lg" href="#download" data-dl="releases">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+        <span data-soon="Coming Sunday 15.11">Download for Windows</span>
+      </a>
+      <a class="link" href="#download">Other platforms</a>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer><div class="wrap">
-  <div class="foot-row">
-    <a class="brand" href="/"><img src="/assets/logo.svg" width="30" height="30" alt=""><span>כוורת</span> <small>Kaveret</small></a>
-    <nav class="foot-links" aria-label="קישורים">
-      <a href="/privacy">מדיניות פרטיות</a>
-      <a href="/terms">תנאי שימוש</a>
-      <a href="https://github.com/OrielGer/kaveret" data-gh hidden>קוד המקור ב־GitHub</a>
-      <a href="mailto:support@kaveret.ai">תמיכה: <bdi>support@kaveret.ai</bdi></a>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="./"><img src="assets/icon.svg" width="28" height="28" alt=""><span>Kaveret</span></a>
+      <p>Help and questions: <a href="mailto:support@kaveret.ai">support@kaveret.ai</a></p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="#download" data-dl="install">Install guide</a>
+      <a href="#download" data-dl="releases">Releases</a>
+      <a href="#download" data-dl="repo">Source code</a>
+      <a href="#download" data-dl="license">MIT licence</a>
+      <a href="privacy/">Privacy</a>
+      <a href="terms/">Terms</a>
+      <a href="he/" hreflang="he" lang="he">עברית</a>
     </nav>
+    <p class="legal">Claude, ChatGPT, Grok, Gemini, Ollama, Zoom, Google Meet, Microsoft Teams, Telegram, Twilio, Tailscale, Windows, Apple, macOS, Intel, Android, iPhone, Safari, GitHub and other product names are trademarks of their owners. Kaveret is an independent open-source project and is not affiliated with or endorsed by any of them.</p>
   </div>
-  <p class="disclaimer">כוורת היא פרויקט קוד פתוח עצמאי. Claude, ‏ChatGPT, ‏Codex, ‏Grok ושאר שמות המוצרים הם סימנים מסחריים של בעליהם; השימוש בהם נועד רק לציין עם מה כוורת עובדת, ואינו מרמז על קשר, מימון או אישור.</p>
-  <p class="disclaimer">© 2026 כוורת</p>
-</div></footer>
+</footer>
 </body>
 </html>

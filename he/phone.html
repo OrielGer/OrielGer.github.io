@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="he" dir="rtl" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>משתמשים בכוורת מהטלפון</title>
+<meta name="description" content="איך מגיעים מהטלפון לבוטים שרצים על המחשב, בשלבים פשוטים: מתקינים Tailscale בשניהם, נכנסים לאותו חשבון, סורקים את קוד ה־QR.">
+<meta name="theme-color" content="#FBF8F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E0C08" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://kaveret.ai/he/phone.html">
+<link rel="alternate" hreflang="en" href="https://kaveret.ai/phone.html">
+<link rel="alternate" hreflang="he" href="https://kaveret.ai/he/phone.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preload" href="../assets/fonts/heebo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/config.js" defer></script>
+<script src="../assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">דילוג לתוכן</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="כוורת, דף הבית">
+      <img src="../assets/icon.svg" width="32" height="32" alt="">
+      <span>כוורת</span>
+    </a>
+    <div class="top-actions">
+      <a class="lang" href="../phone.html" hreflang="en" lang="en" aria-label="English (אנגלית)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg>
+        English
+      </a>
+      <a class="btn btn-ghost btn-sm" href="./#download">חזרה לדף ההורדה</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="sec">
+  <div class="wrap guide">
+    <div class="head">
+      <span class="eyebrow">מדריך לטלפון</span>
+      <h1>משתמשים בכוורת מהטלפון</h1>
+      <p>הבוטים שלכם גרים על המחשב. הטלפון מדבר איתם דרך Tailscale, אפליקציה חינמית שמחברת באופן פרטי בין המכשירים שלכם. לא צריך לשנות שום דבר בראוטר. זה לוקח בערך עשר דקות, פעם אחת.</p>
+    </div>
+
+    <h2>מה צריך</h2>
+    <ul>
+      <li><span>כוורת מותקנת ופתוחה במחשב. כשמשתמשים מהטלפון, המחשב צריך להיות דלוק וער.</span></li>
+      <li><span>חשבון Tailscale חינמי. נכנסים <b>לאותו</b> חשבון במחשב ובטלפון.</span></li>
+    </ul>
+
+    <h2>השלבים</h2>
+    <ol class="howto">
+      <li><span><b>במחשב</b>, בכוורת, פותחים את <b>הגדרות › מכשירים › גישה מהטלפון ומחשבים נוספים</b>. אם Tailscale עוד לא מותקן, כוורת מראה איך להתקין אותו (ב־Windows, בלחיצה אחת). כש־Tailscale נפתח, נכנסים לחשבון.</span></li>
+      <li><span><b>בטלפון</b>, מתקינים את Tailscale מה־App Store או מ־Google Play ונכנסים לאותו חשבון Tailscale.</span></li>
+      <li><span><b>שוב במחשב</b>, מפעילים את הגישה. אם Tailscale מבקש אישור חד־פעמי, לוחצים על הכפתור שכוורת מציגה ומאשרים בדף שנפתח. אז כוורת מציגה קוד QR.</span></li>
+      <li><span><b>בטלפון</b>, סורקים את קוד ה־QR במצלמה. כוורת נפתחת ומכניסה אתכם.</span></li>
+    </ol>
+
+    <h2>שומרים במסך הבית</h2>
+    <ol class="howto">
+      <li><span><b>אייפון:</b> אחרי הסריקה, ב־Safari לוחצים על <span class="kbd">שיתוף</span> ואז על <span class="kbd">הוספה למסך הבית</span>.</span></li>
+      <li><span><b>אנדרואיד (אפליקציית ניסיון):</b> בטלפון מורידים את <b class="nowrap" dir="ltr">Kaveret-<i>version</i>-android.apk</b> מ<a class="link" href="./#download" data-dl="releases">דף הגרסאות</a> ופותחים אותו. כשנשאלים, מאשרים התקנה מהמקור הזה ולוחצים על <span class="kbd">התקנה</span>. בפתיחה הראשונה מקלידים את הכתובת שמופיעה בהגדרות › מכשירים.</span></li>
+    </ol>
+
+    <h2>אם הטלפון לא מגיע לכוורת</h2>
+    <p>בודקים שהמחשב דלוק וער, שכוורת פתוחה, ושב־Tailscale יש חיבור בשני המכשירים עם אותו חשבון. אחר כך סורקים שוב את קוד ה־QR.</p>
+    <p>לא רוצים להתקין כלום בטלפון? כוורת יכולה לדבר איתכם גם בטלגרם, עם הגדרה חד־פעמית בתוך האפליקציה.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="./"><img src="../assets/icon.svg" width="28" height="28" alt=""><span>כוורת</span></a>
+      <p>עזרה ושאלות: <a href="mailto:support@kaveret.ai">support@kaveret.ai</a></p>
+    </div>
+    <nav aria-label="תחתית">
+      <a href="./">דף הבית</a>
+      <a href="../phone.html" hreflang="en" lang="en">English</a>
+    </nav>
+    <p class="legal">‏Tailscale, אייפון, ‏Safari, ‏App Store, אנדרואיד, ‏Google Play, טלגרם ושמות מוצרים אחרים הם סימנים מסחריים של בעליהם. כוורת היא פרויקט קוד פתוח עצמאי, ואינה קשורה לאף אחד מהם ואינה מאושרת על ידם.</p>
+  </div>
+</footer>
+</body>
+</html>

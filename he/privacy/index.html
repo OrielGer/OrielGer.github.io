@@ -1,0 +1,127 @@
+<!doctype html>
+<!-- DRAFT (11.11.2026): a translation of site/privacy/index.html, written from what the app's code does today; to be
+     read by a lawyer before it is relied on. Keep both languages in step. -->
+<html lang="he" dir="rtl" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>מדיניות פרטיות · כוורת</title>
+<meta name="description" content="מה כוורת עושה עם המידע שלכם, כולל המידע מ־Google שהיא משתמשת בו כשמחברים את Google Calendar, ‏Google Contacts או שליחת מיילים מ־Gmail.">
+<meta name="theme-color" content="#FBF8F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E0C08" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://kaveret.ai/he/privacy/">
+<link rel="alternate" hreflang="en" href="https://kaveret.ai/privacy/">
+<link rel="alternate" hreflang="he" href="https://kaveret.ai/he/privacy/">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="preload" href="../../assets/fonts/heebo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<script src="../../assets/config.js" defer></script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">דילוג לתוכן</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="כוורת, דף הבית">
+      <img src="../../assets/icon.svg" width="32" height="32" alt="">
+      <span>כוורת</span>
+    </a>
+    <div class="top-actions">
+      <a class="lang" href="../../privacy/" hreflang="en" lang="en" aria-label="English (אנגלית)">English</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="wrap doc">
+<h1>מדיניות פרטיות</h1>
+<p class="meta">עודכן לאחרונה: 11 בנובמבר 2026</p>
+
+<p class="box"><strong>בקצרה:</strong> כוורת היא אפליקציה שרצה על המחשב שלכם. אנחנו, מי שמפתחים אותה, לא מפעילים שרת שמקבל את המידע שלכם, ואין צורך לפתוח אצלנו חשבון. ההרשאות מ־Google והמידע שלכם נשארים במחשב שלכם. כשבוט עובד על משימה, מה שהוא קורא (למשל מייל) נשלח לשירות ה־AI <em>שאתם</em> בחרתם לאותו בוט, כדי שיוכל לעשות את מה שביקשתם. שום דבר לא נמכר, ושום דבר לא משמש לפרסום.</p>
+
+<h2>1. מי אנחנו</h2>
+<p>כוורת (Kaveret, ‏„כוורת”, „אנחנו”) היא אפליקציית מחשב עצמאית בקוד פתוח, שמתפרסמת ב־<a href="https://kaveret.ai/he/" dir="ltr">kaveret.ai</a>. קוד המקור פתוח לכולם, כך שכל אחד יכול לבדוק את מה שכתוב כאן. יצירת קשר: <a href="mailto:support@kaveret.ai" dir="ltr">support@kaveret.ai</a>.</p>
+
+<h2>2. איפה האפליקציה שומרת את המידע</h2>
+<p>כוורת רצה על המחשב שלכם (Windows; ‏Mac ואפליקציית הטלפון בבטא). הבוטים, השיחות, הזיכרון, ההגדרות, כספת הסודות וההתחברויות לאפליקציות שחיברתם נשמרים בתיקיית הנתונים של האפליקציה במחשב הזה. הסודות וההרשאות (טוקנים) בתיקייה הזו מוצפנים (AES-256-GCM) במפתח שנשמר באותה תיקייה, ולכן מי שיכול לקרוא את הקבצים של חשבון המשתמש שלכם במחשב יכול לקרוא גם אותם. שמרו על חשבון המשתמש שלכם בהתאם.</p>
+<p>אם תבחרו להריץ את כוורת על שרת משלכם במקום במחשב („מצב שרת”), אותו מידע נשמר בשרת הזה, שבשליטתכם. בשני המקרים אין לנו גישה אליו.</p>
+<p>באפליקציה אין ניתוח שימוש, אין טלמטריה ואין דיווח קריסות. אין לנו עותק של המידע שלכם ואיננו יכולים לראות אותו.</p>
+
+<h2>3. מה יוצא מהמחשב, ולאן</h2>
+<p>רק מה שצריך בשביל מה שהגדרתם וביקשתם:</p>
+<ul>
+  <li><strong>שירות ה־AI שבחרתם.</strong> כל בוט רץ על שירות AI שמתחברים אליו עם החשבון שלכם (למשל Claude של Anthropic, ‏ChatGPT של OpenAI, ‏Grok של xAI, ‏Gemini של Google), או על מודל מקומי (Ollama) שנשאר במחשב. ההודעות שלכם, ומה שהבוט קורא כדי לבצע את המשימה (דף, קובץ, מייל), נשלחים לשירות הזה. השירות מטפל בהם לפי התנאים ומדיניות הפרטיות שלו, ולפי ההגדרות של החשבון שלכם אצלו (למשל, אם מותר לו להשתמש בשיחות שלכם לשיפור המודלים). כדאי לבדוק את ההגדרות האלה אצל הספק.</li>
+  <li><strong>האפליקציות שחיברתם.</strong> כשמחברים אפליקציה כמו Gmail, כוורת פונה לשרתים של אותה אפליקציה ישירות מהמחשב שלכם, ברשותכם, כדי לעשות את מה שאתם או הבוטים ביקשתם.</li>
+  <li><strong>ערוצים שהגדרתם</strong>, כמו Telegram, ‏WhatsApp דרך Twilio, ‏Slack או מייל, מקבלים את ההודעות שאתם או הבוטים שולחים דרכם.</li>
+  <li><strong>עדכונים.</strong> האפליקציה בודקת אם יש גרסה חדשה בדף הגרסאות הציבורי של הפרויקט ב־GitHub.</li>
+  <li><strong>המכשירים שלכם.</strong> אם חיברתם טלפון או מחשב נוסף, המידע עובר בין המכשירים שלכם (למשל דרך Tailscale, אם הגדרתם).</li>
+</ul>
+<p>אנחנו לא מוכרים את המידע שלכם, לא משתפים אותו עם מפרסמים או סוחרי מידע, ולא משתמשים בו לפרסום.</p>
+
+<h2>4. מידע מ־Google</h2>
+<p>בחיבור בלחיצה אחת של כוורת ל־Google אפשר לחבר את Google Calendar, ‏Google Contacts ושליחת מיילים מ־Gmail. כל אחד מהם מתחבר בנפרד, רק כשלוחצים עליו „חיבור”, והחלון של Google עצמו מראה בדיוק מה אתם מאשרים לפני שמשהו ניתן. החיבור של כוורת ל־Google לא קורא את המיילים שלכם ב־Gmail ולא ניגש ל־Google Drive שלכם.</p>
+
+<h3>4.1 למה כוורת יכולה לגשת, ולמה</h3>
+<table>
+  <thead><tr><th>אפליקציה</th><th>ההרשאה שכוורת מבקשת מ־Google</th><th>בשביל מה</th></tr></thead>
+  <tbody>
+    <tr><td>Gmail</td><td>שליחת מיילים בשמכם (<code dir="ltr">gmail.send</code>)</td><td>כשאתם מבקשים, הבוט שולח מייל מכתובת ה־Gmail שלכם. כל מייל שהבוט רוצה לשלוח מוצג לכם קודם, ושום דבר לא נשלח עד שאתם מאשרים. ההרשאה הזו לא מאפשרת לכוורת לקרוא, לחפש או למחוק מיילים.</td></tr>
+    <tr><td>Google Calendar</td><td>צפייה ועריכה של האירועים ביומנים (<code dir="ltr">calendar.events</code>)</td><td>הבוט מציג את האירועים, מוצא זמן פנוי, ויוצר, משנה או מוחק אירועים. שינויים מבקשים את האישור שלכם קודם (אפשר לשנות את זה לכל כלי). תזכורת שהגדרתם יכולה לבדוק את היומן כל כמה דקות.</td></tr>
+    <tr><td>Google Contacts</td><td>צפייה באנשי הקשר וב„אנשי קשר אחרים” (<code dir="ltr">contacts.readonly</code>, <code dir="ltr">contacts.other.readonly</code>)</td><td>הבוט מוצא כתובת מייל או טלפון של אדם לפי שם, למשל כדי למען מייל שביקשתם.</td></tr>
+  </tbody>
+</table>
+<p>בכל חיבור כוורת משתמשת גם בהתחברות הבסיסית של Google (<code dir="ltr">openid</code>, <code dir="ltr">email</code>, <code dir="ltr">profile</code>) כדי לקרוא את כתובת המייל והשם של החשבון המחובר, וכך להראות לכם איזה חשבון Google מחובר.</p>
+<p>אם תבחרו לחבר את Google דרך פרויקט Google Cloud משלכם (בחלק „מתקדם” באפליקציה), החיבור הזה משתמש בהרשאות שהגדרתם בפרויקט שלכם, וסעיפים 4.2 עד 4.5 חלים עליו באותו אופן.</p>
+
+<h3>4.2 איך זה נשמר</h3>
+<p>ההרשאות (טוקנים) ש־Google מנפיקה נשמרות מוצפנות בתיקיית הנתונים של האפליקציה במחשב שלכם (סעיף 2). הן אף פעם לא נשלחות אלינו. התוכן שכוורת קוראת מ־Google לא מועתק למאגר נפרד: הוא מופיע בשיחה שבה הבוט השתמש בו (שנשמרת במחשב שלכם, כמו כל השיחות). כל דבר שבוט מציע לשמור בזיכרון שלו נשמר רק אחרי שעברתם עליו.</p>
+
+<h3>4.3 עם מי זה משותף</h3>
+<p>מידע מ־Google משמש רק כדי לעשות את מה שאתם מבקשים מהבוטים, והוא משותף רק עם שירות ה־AI שבחרתם לאותו בוט (סעיף 3), כחלק מביצוע המשימה. הוא אף פעם לא נשלח אלינו, לא נמכר, לא משמש לפרסום, ואנחנו לא משתמשים בו לפיתוח, לשיפור או לאימון של שום מודל AI או למידת מכונה.</p>
+
+<h3>4.4 שימוש מוגבל (Limited Use)</h3>
+<p class="box" lang="en" dir="ltr">Kaveret’s use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. The use of information received from Google Workspace scopes will adhere to the <a href="https://developers.google.com/workspace/workspace-api-user-data-developer-policy">Google Workspace API User Data and Developer Policy</a>, including the Limited Use requirements.</p>
+<p>בעברית: השימוש של כוורת במידע שמתקבל מממשקי ה־API של Google, והעברתו לכל אפליקציה אחרת, יעמדו ב<a href="https://developers.google.com/terms/api-services-user-data-policy">מדיניות נתוני המשתמש של שירותי ה־API של Google</a>, כולל דרישות השימוש המוגבל (Limited Use), וכך גם השימוש במידע שמתקבל מהרשאות של Google Workspace, לפי <a href="https://developers.google.com/workspace/workspace-api-user-data-developer-policy">מדיניות נתוני המשתמש והמפתחים של ממשקי Google Workspace</a>.</p>
+<p>בפרט: מידע מ־Google משמש רק כדי לספק את היכולות שאתם רואים ומשתמשים בהן באפליקציה; הוא מועבר לאחרים רק כדי לספק את היכולות האלה לבקשתכם (לשירות ה־AI שבחרתם, כמתואר למעלה), לצורכי אבטחה, כדי לעמוד בחוק, או כחלק ממיזוג או מכירה בהסכמה מפורשת שלכם מראש; הוא אף פעם לא משמש ליצירה, לאימון או לשיפור של מודל למידת מכונה או AI; ואף אדם לא קורא אותו, אלא אם ביקשתם (למשל כששלחתם אותו לתמיכה), אם זה נדרש לאבטחה או אם החוק מחייב.</p>
+
+<h3>4.5 ביטול הגישה</h3>
+<p>בכוורת פותחים „חיבור אפליקציות”, בוחרים את האפליקציה ולוחצים „ניתוק”: כוורת מוחקת את ההרשאות השמורות ומבקשת מ־Google לבטל אותן (אם אפליקציית Google אחרת בכוורת עדיין משתמשת באותה התחברות ל־Google, היא ממשיכה לעבוד). אפשר גם להסיר את הגישה של כוורת בכל רגע ב<a href="https://myaccount.google.com/connections">דף החיבורים לאפליקציות צד שלישי</a> בחשבון Google שלכם.</p>
+
+<h2>5. מחיקת המידע</h2>
+<p>המידע נמצא במחשב שלכם, ולכן אתם מוחקים אותו בעצמכם: מנתקים אפליקציות (למעלה), מוחקים שיחות, זיכרון או פריטים בכספת באפליקציה, או מסירים את האפליקציה ומוחקים את תיקיית הנתונים שלה. אין אצלנו עותק, אז אין לנו מה למחוק. לשאלות: <a href="mailto:support@kaveret.ai" dir="ltr">support@kaveret.ai</a>.</p>
+
+<h2>6. האתר הזה</h2>
+<p>ב־<span dir="ltr">kaveret.ai</span> אין עוגיות (cookies), אין ניתוח שימוש ואין כלי מעקב, והוא לא טוען שום דבר מאתרים אחרים. החברה שמארחת את האתר עשויה לשמור יומני שרת רגילים (כמו כתובת IP, שעה והדף שהתבקש) לצורכי אבטחה ותפעול.</p>
+
+<h2>7. פנייה לתמיכה</h2>
+<p>אם תכתבו ל־<a href="mailto:support@kaveret.ai" dir="ltr">support@kaveret.ai</a>, נשתמש בהודעה ובכתובת רק כדי לענות לכם. בבקשה אל תשלחו סיסמאות, טוקנים או סודות אחרים.</p>
+
+<h2>8. ילדים</h2>
+<p>כוורת לא מיועדת לילדים מתחת לגיל 13, ואנחנו לא אוספים ביודעין מידע עליהם.</p>
+
+<h2>9. שינויים</h2>
+<p>אם המדיניות תשתנה, נעדכן את הדף הזה ואת התאריך שבראשו. אם גרסה של האפליקציה תתחיל להשתמש במידע מ־Google בדרך חדשה, זה ייכתב בהערות הגרסה, ו־Google תבקש את ההסכמה שלכם מחדש לפני שתינתן הרשאה חדשה.</p>
+
+<h2>10. יצירת קשר</h2>
+<p><a href="mailto:support@kaveret.ai" dir="ltr">support@kaveret.ai</a></p>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="../"><img src="../../assets/icon.svg" width="28" height="28" alt=""><span>כוורת</span></a>
+      <p>עזרה ושאלות: <a href="mailto:support@kaveret.ai" dir="ltr">support@kaveret.ai</a></p>
+    </div>
+    <nav aria-label="תחתית">
+      <a href="./" aria-current="page">פרטיות</a>
+      <a href="../terms/">תנאי שימוש</a>
+      <a href="../#download" data-dl="repo">קוד המקור</a>
+      <a href="../../privacy/" hreflang="en" lang="en">English</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

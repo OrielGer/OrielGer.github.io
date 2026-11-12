@@ -1,0 +1,127 @@
+<!doctype html>
+<!-- DRAFT (11.11.2026): written from what the app's code does today; to be read by a lawyer before it is relied on.
+     Keep it true of the app: if the Google scopes or the data flows change, change this page in the same PR
+     (the Google table below mirrors BUILTIN_GOOGLE_SCOPES in shared/google-scopes.mjs, owner decision 11.11). Hebrew twin: site/he/privacy/index.html -->
+<html lang="en" dir="ltr" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Privacy policy · Kaveret</title>
+<meta name="description" content="What Kaveret does with your data, including the Google data it uses when you connect Google Calendar, Google Contacts or sending email from Gmail.">
+<meta name="theme-color" content="#FBF8F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E0C08" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://kaveret.ai/privacy/">
+<link rel="alternate" hreflang="en" href="https://kaveret.ai/privacy/">
+<link rel="alternate" hreflang="he" href="https://kaveret.ai/he/privacy/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="preload" href="../assets/fonts/heebo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/config.js" defer></script>
+<script src="../assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="Kaveret, home">
+      <img src="../assets/icon.svg" width="32" height="32" alt="">
+      <span>Kaveret</span>
+    </a>
+    <div class="top-actions">
+      <a class="lang" href="../he/privacy/" hreflang="he" lang="he" aria-label="עברית (Hebrew)">עברית</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="wrap doc">
+<h1>Privacy policy</h1>
+<p class="meta">Last updated: 11 November 2026</p>
+
+<p class="box"><strong>In short:</strong> Kaveret is an app that runs on your own computer. We, the people who make it, do not run a server that receives your data, and you do not create an account with us. Your Google sign-in tokens and your data stay on your computer. When one of your bots works on a task, what it reads (for example an email) is sent to the AI service <em>you</em> chose for that bot, so that it can do what you asked. Nothing is sold, nothing is used for advertising.</p>
+
+<h2>1. Who we are</h2>
+<p>Kaveret (“Kaveret”, “we”) is an independent open-source desktop app, published at <a href="https://kaveret.ai/">kaveret.ai</a>. Its source code is public, so anyone can check what this page says. Contact: <a href="mailto:support@kaveret.ai">support@kaveret.ai</a>.</p>
+
+<h2>2. Where the app keeps your data</h2>
+<p>Kaveret runs on your computer (Windows; Mac and the phone app are in beta). Your bots, chats, memory, settings, the secrets vault and the sign-ins to apps you connect are stored in the app’s data folder on that computer. Secrets and sign-in tokens in that folder are encrypted (AES-256-GCM) with a key that is kept in the same folder, so anyone who can read your computer account’s files could read them too; protect your computer account accordingly.</p>
+<p>If you choose to run Kaveret on a server of your own instead of your computer (“server mode”), the same data lives on that server, which you control. We have no access to it either way.</p>
+<p>The app has no usage analytics, no telemetry and no crash reporting. We have no copy of your data and cannot see it.</p>
+
+<h2>3. What leaves your computer, and to whom</h2>
+<p>Only what is needed for the things you set up and ask for:</p>
+<ul>
+  <li><strong>The AI service you choose.</strong> Each bot runs on an AI service you sign in to with your own account (for example Claude by Anthropic, ChatGPT by OpenAI, Grok by xAI, Gemini by Google), or on a local model (Ollama) that stays on your computer. Your messages, and what the bot reads to do the task (a page, a file, an email), are sent to that service. That service handles them under its own terms and privacy policy, and under the settings of your account with it (for example, whether it may use your conversations to improve its models). Please check those settings with your provider.</li>
+  <li><strong>The apps you connect.</strong> When you connect an app such as Gmail, Kaveret talks to that app’s servers directly from your computer, with your permission, to do what you or your bots asked.</li>
+  <li><strong>Channels you set up</strong>, such as Telegram, WhatsApp through Twilio, Slack or email, receive the messages you or your bots send through them.</li>
+  <li><strong>Updates.</strong> The app checks for new versions on the project’s public release page on GitHub.</li>
+  <li><strong>Your own devices.</strong> If you pair a phone or another computer, your data travels between your devices (for example over Tailscale, if you set it up).</li>
+</ul>
+<p>We do not sell your data, share it with advertisers or data brokers, or use it for advertising.</p>
+
+<h2>4. Google user data</h2>
+<p>With Kaveret’s one-click Google connection you can connect Google Calendar, Google Contacts and sending email from Gmail. Each one is connected separately, only when you click “Connect” on it, and Google’s own window shows you exactly what you are allowing before anything is granted. Kaveret’s Google connection does not read your Gmail messages and does not access your Google Drive.</p>
+
+<h3>4.1 What Kaveret can access, and why</h3>
+<table>
+  <thead><tr><th>App</th><th>Permission Kaveret asks Google for</th><th>What it is used for</th></tr></thead>
+  <tbody>
+    <tr><td>Gmail</td><td>Send email on your behalf (<code>gmail.send</code>)</td><td>When you ask, your bot sends an email from your Gmail address. Every email the bot wants to send is shown to you first, and nothing is sent until you approve it. Kaveret cannot read, search or delete your email through this permission.</td></tr>
+    <tr><td>Google Calendar</td><td>See and edit the events on your calendars (<code>calendar.events</code>)</td><td>Your bot lists your events, finds free time, and creates, changes or deletes events. Changes ask for your approval first (you can change that per tool). A reminder you set up can check your calendar every few minutes.</td></tr>
+    <tr><td>Google Contacts</td><td>See your contacts and “other contacts” (<code>contacts.readonly</code>, <code>contacts.other.readonly</code>)</td><td>Your bot looks up a person’s email address or phone number by name, for example to address an email you asked for.</td></tr>
+  </tbody>
+</table>
+<p>With each connection Kaveret also uses Google’s basic sign-in (<code>openid</code>, <code>email</code>, <code>profile</code>) to read the connected account’s email address and name, so that the app can show you which Google account is connected.</p>
+<p>If you choose to connect Google through your own Google Cloud project instead (under “Advanced” in the app), that connection uses the permissions you set up in your own project, and sections 4.2 to 4.5 apply to it in the same way.</p>
+
+<h3>4.2 How it is stored</h3>
+<p>The sign-in tokens Google issues are stored encrypted in the app’s data folder on your computer (section 2). They are never sent to us. The content Kaveret reads from Google is not copied into a separate store: it appears in the chat where your bot used it (kept on your computer, like all your chats). Anything a bot suggests saving to its memory is saved only after you review it.</p>
+
+<h3>4.3 Who it is shared with</h3>
+<p>Google data is used only to do what you ask your bots to do, and it is shared only with the AI service you chose for that bot (section 3), as part of doing that task. It is never sent to us, never sold and never used for advertising, and we do not use it to develop, improve or train any AI or machine-learning model.</p>
+
+<h3>4.4 Limited Use</h3>
+<p class="box">Kaveret’s use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. The use of information received from Google Workspace scopes will adhere to the <a href="https://developers.google.com/workspace/workspace-api-user-data-developer-policy">Google Workspace API User Data and Developer Policy</a>, including the Limited Use requirements.</p>
+<p>In particular: Google data is used only to provide the features you see and use in the app; it is transferred to others only to provide those features at your request (to the AI service you chose, as described above), for security, to comply with the law, or as part of a merger or sale with your explicit prior consent; it is never used to create, train or improve any machine-learning or AI model; and no person reads it unless you ask us to (for example when you send it to support), it is needed for security or the law requires it.</p>
+
+<h3>4.5 Taking access back</h3>
+<p>In Kaveret, open “Connect apps”, choose the app and click “Disconnect”: Kaveret deletes the stored tokens and asks Google to revoke them (if another Google app in Kaveret still uses the same Google sign-in, that one keeps working). You can also remove Kaveret’s access at any time on your Google Account’s <a href="https://myaccount.google.com/connections">third-party connections page</a>.</p>
+
+<h2>5. Deleting your data</h2>
+<p>Because your data is on your computer, you delete it yourself: disconnect apps (above), delete chats, memory or vault items in the app, or uninstall the app and delete its data folder. We hold no copy, so there is nothing for us to delete; if you have a question, write to <a href="mailto:support@kaveret.ai">support@kaveret.ai</a>.</p>
+
+<h2>6. This website</h2>
+<p>kaveret.ai has no cookies, no analytics and no trackers, and loads nothing from other sites. The company that hosts the website may keep ordinary server logs (such as IP address, time and page requested) for security and operation.</p>
+
+<h2>7. Email to support</h2>
+<p>If you write to <a href="mailto:support@kaveret.ai">support@kaveret.ai</a>, we use your message and address only to answer you. Please do not send passwords, tokens or other secrets.</p>
+
+<h2>8. Children</h2>
+<p>Kaveret is not meant for children under 13, and we do not knowingly collect data from them.</p>
+
+<h2>9. Changes</h2>
+<p>If this policy changes, we will update this page and the date at the top. If a version of the app starts using Google data in a new way, it will say so in its release notes, and Google will ask for your consent again before any new permission is granted.</p>
+
+<h2>10. Contact</h2>
+<p><a href="mailto:support@kaveret.ai">support@kaveret.ai</a></p>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="../"><img src="../assets/icon.svg" width="28" height="28" alt=""><span>Kaveret</span></a>
+      <p>Help and questions: <a href="mailto:support@kaveret.ai">support@kaveret.ai</a></p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="./" aria-current="page">Privacy</a>
+      <a href="../terms/">Terms</a>
+      <a href="../#download" data-dl="repo">Source code</a>
+      <a href="../he/privacy/" hreflang="he" lang="he">עברית</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
