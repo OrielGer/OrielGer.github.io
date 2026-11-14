@@ -19,18 +19,49 @@
     for (var s = 0; s < soon.length; s++) soon[s].textContent = soon[s].getAttribute('data-soon');
   }
   var base = 'https://github.com/' + repo;
+  var files = cfg.files || {};
+  var file = function (name) { return name ? base + '/releases/latest/download/' + name : ''; };
+  // install/ and changelog/ are pages on this site: their [data-dl="install"] links keep the href in the page
   var urls = {
     releases: base + '/releases/latest',
     repo: base,
-    install: base + '/blob/main/docs/INSTALL.md',
+    guide: base + '/blob/main/docs/INSTALL.md',
     license: base + '/blob/main/LICENSE',
+    sums: file('SHA256SUMS'),
+    win: file(files.win),
+    'mac-arm': file(files.macArm),
+    'mac-intel': file(files.macIntel),
+    apk: file(files.apk),
   };
+
+  // the main button: the file for this visitor's system. A Mac gets the Apple-chip file as the button and the Intel
+  // file first in the line under it (the chip can't be told apart reliably). Anything else: the releases page.
+  var nav = window.navigator || {};
+  var sys = ((nav.userAgentData && nav.userAgentData.platform) || '') + ' ' + (nav.userAgent || '');
+  var os = /android/i.test(sys) ? 'apk'
+    : /iphone|ipad|ipod/i.test(sys) || (/mac/i.test(sys) && nav.maxTouchPoints > 1) ? ''
+    : /mac/i.test(sys) ? 'mac-arm'
+    : /win/i.test(sys) ? 'win' : '';
+  var main = os && urls[os] ? os : 'releases';
+  urls.auto = urls[main];
+
   if (repo && live) {
     var links = document.querySelectorAll('[data-dl]');
     for (var i = 0; i < links.length; i++) {
       var u = urls[links[i].getAttribute('data-dl')];
       if (u) links[i].setAttribute('href', u);
     }
+    // the label says which file the button gives (each page holds its own words)
+    var labels = document.querySelectorAll('[data-auto-label]');
+    for (var l = 0; l < labels.length; l++) {
+      var t = labels[l].getAttribute('data-label-' + main);
+      if (t) labels[l].textContent = t;
+    }
+    // the small line under the button: every other file, without the one the button already gives
+    var alts = document.querySelectorAll('[data-alt]');
+    for (var a = 0; a < alts.length; a++) alts[a].hidden = false;
+    var altItems = document.querySelectorAll('[data-alt-item]');
+    for (var m = 0; m < altItems.length; m++) altItems[m].hidden = altItems[m].getAttribute('data-dl') === main;
   }
 
   // header: a hairline once the page has scrolled

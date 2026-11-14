@@ -55,7 +55,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg>
         English
       </a>
-      <a class="btn btn-primary btn-sm" href="#download" data-dl="releases"><span data-soon="ביום ראשון 15.11">הורדה</span></a>
+      <a class="btn btn-primary btn-sm" href="#download"><span data-soon="ביום ראשון 22.11">הורדה</span></a>
     </div>
   </div>
 </header>
@@ -68,12 +68,13 @@
     <h1 id="hero-title"><span class="line"><span class="hl">צוות AI</span> משלכם.</span> <span class="line">בלי להיות מפתחים.</span></h1>
     <p class="lede">כוורת הופכת את מנויי ה־AI שאתם כבר משלמים עליהם לצוות של בוטים שעובד בשבילכם, על המחשב שלכם. מתקינים, מחברים את החשבון, ומספרים לבאדי, הבוט הראשי, מה צריך, במילים פשוטות.</p>
     <div class="cta">
-      <a class="btn btn-primary btn-lg" href="#download" data-dl="releases">
+      <a class="btn btn-primary btn-lg" href="#download" data-dl="auto">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
-        <span data-soon="מגיע ביום ראשון 15.11">הורדה ל־Windows</span>
+        <span data-soon="מגיע ביום ראשון 22.11" data-auto-label data-label-win="הורדה ל־Windows" data-label-mac-arm="הורדה למק (מעבד Apple)" data-label-apk="הורדה לאנדרואיד (גרסת ניסיון)" data-label-releases="הורדת כוורת">הורדה ל־Windows</span>
       </a>
       <a class="link" href="#download">מק, אנדרואיד ואייפון</a>
     </div>
+    <p class="dl-alt" data-alt hidden>הורדות אחרות: <a href="#download" data-dl="mac-arm" data-alt-item>מק (מעבד Apple)</a><a href="#download" data-dl="mac-intel" data-alt-item>מק (Intel)</a><a href="#download" data-dl="win" data-alt-item>Windows</a><a href="#download" data-dl="apk" data-alt-item>אנדרואיד</a><a href="#download" data-dl="releases" data-alt-item>כל הקבצים</a><a href="install/" data-dl="install">עזרה בהתקנה</a></p>
     <p class="cta-note">עובד עם המנויים שלכם, לפי התנאים של כל חברה.</p>
 
     <figure class="stage">
@@ -116,7 +117,7 @@
       <li class="step reveal">
         <span class="n" aria-hidden="true">2</span>
         <h3>מחברים את מה שמשלמים עליו</h3>
-        <p>בוחרים Claude, ‏ChatGPT או Grok. ב־Windows לחיצה אחת מתקינה את הכלי הרשמי של אותה חברה בתוך האפליקציה. אחר כך נכנסים לחשבון שלכם בחלון שלו.</p>
+        <p>בוחרים Claude, ‏ChatGPT או Grok. ב־Windows לחיצה אחת מתקינה את הכלי הרשמי של אותה חברה בתוך האפליקציה. אחר כך נכנסים לחשבון שלכם בחלון שלו. ‏Grok עובד אם המנוי שלכם ל־Grok כולל את Grok CLI.</p>
         <span class="step-line" aria-hidden="true"></span>
       </li>
       <li class="step reveal">
@@ -125,6 +126,15 @@
         <p>כותבים מה צריך, כמו הודעה לחבר. באדי עונה, או מקים בוט חדש למשימה ומספר מה עשה.</p>
       </li>
     </ol>
+    <figure class="demo reveal">
+      <div class="window">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" type="image/webp" srcset="../assets/img/demo-he-still.webp">
+          <img src="../assets/img/demo-he.gif" width="900" height="450" loading="lazy" decoding="async" alt="הדגמה קצרה של כוורת עם נתוני הדגמה: ה־Bots מדווחים מה כל אחד עושה, כרטיס אישור מראה בדיוק איזה קובץ ישתנה ומחכה ללחיצה, ו־Bot מסכם פגישה בזמן אמת.">
+        </picture>
+      </div>
+      <figcaption>שלושה רגעים מהאפליקציה האמיתית, עם נתוני הדגמה: הצוות, כרטיס אישור, ופגישה.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -138,7 +148,7 @@
         <p>בלי קובצי הגדרות, בלי שרת ובלי קוד. כוורת מובילה אתכם בהתקנה על המסך, ומשם פשוט מדברים איתה.</p>
         <ul class="ticks">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>לחיצה אחת מתקינה את המנוע.</b> ב־Windows כוורת מפעילה בשבילכם את ההתקנה הרשמית ומראה את ההתקדמות.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>באדי בונה לכם צוות.</b> מבקשים בוט שעוקב אחרי מחירים או מסדר את המיילים, ובאדי יוצר אותו, בוחר מנוע ומסביר מה הוא יעשה.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>באדי בונה לכם צוות.</b> מבקשים בוט שעוקב אחרי מחירים או מסכם את המיילים, ובאדי יוצר אותו, בוחר מנוע ומסביר מה הוא יעשה.</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>אפליקציות כשצריך.</b> כשמשימה צריכה את המייל או היומן, הבוט מציג כרטיס חיבור בתוך השיחה.</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>משהו לא עובד?</b> בהגדרות, "בדוק שהכל עובד" מוצא את הבעיה ולוקח אתכם למסך שמתקן אותה.</span></li>
         </ul>
@@ -157,12 +167,12 @@
     <article class="feature flip">
       <div class="copy reveal">
         <span class="eyebrow">המנויים שלכם</span>
-        <h3>כל מה שאתם משלמים עליו, כצוות אחד. בלי חשבונות API.</h3>
-        <p>‏Claude, ‏ChatGPT ו־Grok עובדים כל אחד על המנוי שלכם, דרך הכלי הרשמי של החברה, כשאתם מחוברים בעצמכם. לכל בוט נותנים את המנוע שמתאים לו.</p>
+        <h3>כל מה שאתם משלמים עליו, כצוות אחד.</h3>
+        <p>כוורת עצמה חינמית. כל חברת AI מחייבת אתכם על התוכנית שלה. ‏Claude, ‏ChatGPT ו־Grok עובדים כל אחד על המנוי שלכם, דרך הכלי הרשמי של החברה, כשאתם מחוברים בעצמכם. לכל בוט נותנים את המנוע שמתאים לו.</p>
         <ul class="ticks">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>כמה מנועים בצוות אחד.</b> לכל בוט מנוע משלו, ועד שישה בוטים יכולים לדבר באותה שיחה קבוצתית.</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>נגמרה המכסה?</b> מעבירים את הבוט למנוע אחר בלחיצה, או נותנים לו להמשיך לבד במנוע של חברה אחרת.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>רואים כמה נוצל.</b> כמה מכל מנוי כבר נוצל, עם התראה ב־80%.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>רואים כמה נוצל.</b> ב־Claude וב־ChatGPT: כמה מהמנוי כבר נוצל, עם התראה ב־80%.</span></li>
         </ul>
       </div>
       <figure class="shot shot-inset reveal">
@@ -191,7 +201,7 @@
         <p>בוט חדש מציג לכם כרטיס ומחכה לאישור לפני שהוא משנה קובץ, מריץ פקודה שמשנה משהו, שולח הודעה או מוציא כסף. מה מותר לו מכאן והלאה, אתם מחליטים.</p>
         <ul class="ticks">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>תוכן מבחוץ לא יכול להפעיל אותו בשקט.</b> אחרי שבוט קרא דף, מייל או הודעה של מישהו אחר, כל פעולה בשיחה הזו צריכה אישור חדש, וסיסמאות וסודות לא נמסרים לו.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>הדברים הגדולים מגיעים אליכם.</b> בהגדרה המומלצת, תשלומים, סיסמאות, הודעות לאנשים אחרים, התקנות ושינויי מערכת תמיד שואלים, גם כשצעדים שגרתיים רצים לבד.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>הדברים הגדולים מגיעים אליכם.</b> בהגדרה המומלצת, תשלומים, סיסמאות, הודעות לאנשים אחרים, התקנות ושינויי מערכת תמיד שואלים.</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>ביטול.</b> רואים מה בוט שינה בתיקייה שלו, ומבטלים בלחיצה.</span></li>
         </ul>
       </div>
@@ -226,13 +236,13 @@
       <article class="oc reveal">
         <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
         <h3>תשובות שמחכות לכם</h3>
-        <p>הוא קורא את תיבת הדואר וכותב בשבילכם תשובות. הן מחכות כטיוטה עד שלוחצים "שליחה", אלא אם אישרתם נמען מסוים.</p>
+        <p>הוא מנסח בשבילכם תשובות למיילים. כל תשובה מחכה עד שלוחצים "שליחה", אלא אם אישרתם את הנמען. כדי שיוכל לקרוא את תיבת הדואר, מחברים אותה פעם אחת עם סיסמת אפליקציה של Gmail.</p>
         <span class="who">עסק קטן</span>
       </article>
       <article class="oc reveal">
         <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg></span>
         <h3>סיכום מכל פגישה</h3>
-        <p>אחרי שאתם מאשרים, הוא מצטרף לשיחת Zoom, ‏Google Meet או Teams ושולח לכם סיכום, החלטות ומשימות.</p>
+        <p>אחרי שאתם מאשרים, הוא מצטרף לשיחת Zoom, ‏Google Meet או Teams כאורח (המארח מכניס אותו, והכתוביות בשיחה צריכות להיות פעילות) ושולח לכם סיכום, החלטות ומשימות.</p>
         <span class="who">עסק קטן</span>
       </article>
       <article class="oc reveal">
@@ -254,7 +264,12 @@
         <span class="who">לכולם</span>
       </article>
     </div>
-    <p class="fine reveal">חלק מהדברים צריכים חיבור חד־פעמי: חשבון המייל, בוט בטלגרם או קישור לפגישה. שיחות טלפון והודעות SMS צריכות חשבון Twilio משלכם.</p>
+    <div class="tpl-strip reveal" aria-labelledby="tpl-title">
+      <h3 id="tpl-title">להתחיל מתבנית</h3>
+      <p>Bots מוכנים, כל אחד עם הוראות משלו. בכוורת פותחים Bot חדש ובוחרים מתבנית, או פשוט מבקשים מבאדי.</p>
+      <ul class="tpl-list"><li data-tpl="personal-assistant">עוזר אישי</li><li data-tpl="shopping">קניות והזמנות</li><li data-tpl="travel">מתכנן נסיעות</li><li data-tpl="research">חוקר</li><li data-tpl="finance-tracker">מעקב הוצאות</li><li data-tpl="meeting-notes">סיכומי פגישות</li><li data-tpl="home-maintenance">תחזוקת הבית</li><li data-tpl="homework-helper">עוזר שיעורי בית</li></ul>
+    </div>
+    <p class="fine reveal">חלק מהדברים צריכים חיבור חד־פעמי: חשבון המייל, בוט בטלגרם או קישור לפגישה. החיבור בלחיצה אחת ל־Google נותן יומן, אנשי קשר ושליחת מיילים; קריאת תיבת הדואר עובדת עם סיסמת אפליקציה ל־Gmail (טופס אחד) או בדפדפן של הבוט. שיחות טלפון והודעות SMS צריכות חשבון Twilio משלכם.</p>
   </div>
 </section>
 
@@ -316,43 +331,47 @@
       <span class="eyebrow">הורדה והתקנה</span>
       <h2 id="dl-title">מורידים את כוורת</h2>
       <p>כוורת רצה על המחשב שלכם. הטלפון מגיע אליה דרך Tailscale, אפליקציה חינמית שמתקינים בשניהם.</p>
-      <p class="launch-note" id="launch-note" hidden>ההורדות נפתחות ביום ראשון 15.11, עם הגרסה הציבורית הראשונה. עד אז כפתורי ההורדה נשארים בדף הזה.</p>
+      <p class="launch-note" id="launch-note" hidden>ההורדות נפתחות ביום ראשון 22.11, עם הגרסה הציבורית הראשונה. עד אז כפתורי ההורדה נשארים בדף הזה.</p>
+      <p class="dl-help"><a class="link" href="install/" data-dl="install">עזרה בהתקנה, צעד אחר צעד: Windows, מק ואנדרואיד</a> · <a class="link" href="install/#requirements" data-dl="install">מה המחשב צריך</a></p>
     </div>
     <div class="dl-grid">
       <article class="card main reveal" aria-labelledby="win-title">
         <h3 id="win-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Windows</h3>
-        <p>קובץ ההתקנה מגיע מדף הגרסאות של הפרויקט ב־GitHub.</p>
-        <a class="btn btn-primary btn-lg" href="#download" data-dl="releases">
+        <p>ל־Windows 10 ו־11 (‏64 ביט). קובץ ההתקנה מגיע מדף הגרסאות של הפרויקט ב־GitHub.</p>
+        <a class="btn btn-primary btn-lg" href="#download" data-dl="win">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
-          <span data-soon="מגיע ביום ראשון 15.11">הורדה ל־Windows</span>
+          <span data-soon="מגיע ביום ראשון 22.11">הורדה ל־Windows</span>
         </a>
         <ol class="howto">
-          <li><span>מורידים את <b class="nowrap" dir="ltr">Kaveret-Setup-<i>version</i>.exe</b> מדף הגרסאות ופותחים אותו.</span></li>
+          <li><span>מורידים את <b class="nowrap" dir="ltr">Kaveret-Setup.exe</b> ופותחים אותו.</span></li>
           <li><span>‏Windows מציג "<bdi dir="ltr"><b>Windows protected your PC</b></bdi>" (או "Windows הגן על המחשב שלך"). זה קורה כי האפליקציה חדשה וקובץ ההתקנה עוד לא חתום דיגיטלית.</span></li>
           <li><span>לוחצים <span class="kbd" dir="ltr">More info</span> (מידע נוסף), ואז <span class="kbd" dir="ltr">Run anyway</span> (הפעל בכל מקרה).</span></li>
           <li><span>מסיימים את ההתקנה. כוורת נפתחת עם באדי, מוכנה לחבר את המנוי הראשון.</span></li>
         </ol>
         <div class="smart">
           <h4>רוצים לבדוק את הקובץ קודם?</h4>
-          <p>בכל גרסה יש רשימת SHA-256 לכל קובץ. <a class="link" href="#download" data-dl="install">מדריך ההתקנה</a> מראה את הפקודה האחת שמשווה ביניהם.</p>
+          <p>בכל גרסה יש רשימת SHA-256 לכל קובץ. <a class="link" href="install/#check" data-dl="install">העזרה בהתקנה</a> מראה את הפקודה האחת שמשווה ביניהם.</p>
         </div>
       </article>
       <article class="card reveal" aria-labelledby="mac-title">
         <h3 id="mac-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg>מק <span class="tag">בטא</span></h3>
-        <p>למעבדי Apple ולמעבדי Intel. הגרסה למק עוד לא מאושרת (notarized) על ידי Apple, לכן בפעם הראשונה לוחצים לחיצה ימנית על Kaveret ובוחרים Open. ב־macOS 15 ואילך: הגדרות המערכת › פרטיות ואבטחה › Open Anyway.</p>
-        <a class="btn btn-ghost btn-sm" href="#download" data-dl="releases"><span data-soon="למק: מגיע 15.11">הורדות למק</span></a>
+        <p>למעבדי Apple ולמעבדי Intel. הגרסה למק עוד לא מאושרת (notarized) על ידי Apple, לכן בפעם הראשונה לוחצים לחיצה ימנית על Kaveret ובוחרים Open. ב־macOS 15 ואילך: הגדרות המערכת › פרטיות ואבטחה › Open Anyway. היא עוד לא מתעדכנת לבד: כדי לעדכן, מורידים את הקובץ החדש ומתקינים אותו על הישן.</p>
+        <p class="which">איזה מק יש לכם? תפריט Apple › אודות המק הזה. "שבב: Apple M…" (Chip) זה מעבד Apple; "מעבד: Intel" (Processor) זה Intel.</p>
+        <div class="btn-row"><a class="btn btn-ghost btn-sm" href="#download" data-dl="mac-arm"><span data-soon="מעבד Apple: מגיע 22.11">מק עם מעבד Apple</span></a><a class="btn btn-ghost btn-sm" href="#download" data-dl="mac-intel"><span data-soon="Intel: מגיע 22.11">מק עם Intel</span></a></div>
+        <p class="card-help"><a class="link" href="install/#mac" data-dl="install">עזרה בהתקנה במק</a></p>
       </article>
       <article class="card reveal" aria-labelledby="phone-title">
         <h3 id="phone-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>טלפון <span class="tag">גרסת ניסיון</span></h3>
         <p><b>מה צריך:</b> ‏Tailscale, אפליקציה חינמית, במחשב ובטלפון, מחוברת לאותו חשבון Tailscale בשניהם. דרכה הטלפון מגיע לכוורת באופן פרטי. בכוורת, הגדרות › מכשירים › גישה מהטלפון ומחשבים נוספים מדריך אתכם ומציג קוד QR.</p>
-        <p><b>אנדרואיד:</b> מתקינים ידנית את אפליקציית הניסיון מדף הגרסאות (ומאשרים התקנה מהמקור הזה כשנשאלים), ואז מקלידים את הכתובת שמופיעה בהגדרות › מכשירים. <b>אייפון:</b> סורקים את קוד ה־QR במצלמה, ואז ב־Safari בוחרים "הוספה למסך הבית".</p>
-        <a class="btn btn-ghost btn-sm" href="phone.html">מדריך לטלפון</a>
+        <p><b>אנדרואיד:</b> מורידים בטלפון את <b class="nowrap" dir="ltr">Kaveret.apk</b> ומתקינים ידנית (מאשרים התקנה מהמקור הזה כשנשאלים; אם Google Play Protect מזהיר, בוחרים "להתקין בכל זאת"), ואז מקלידים את הכתובת שמופיעה בהגדרות › מכשירים. <b>אייפון:</b> סורקים את קוד ה־QR במצלמה, ואז ב־Safari בוחרים "הוספה למסך הבית".</p>
+        <div class="btn-row"><a class="btn btn-ghost btn-sm" href="#download" data-dl="apk"><span data-soon="אנדרואיד: מגיע 22.11">אפליקציית הניסיון לאנדרואיד</span></a><a class="btn btn-ghost btn-sm" href="phone.html">מדריך לטלפון</a></div>
+        <p class="card-help"><a class="link" href="install/#android" data-dl="install">עזרה בהתקנה באנדרואיד</a></p>
       </article>
     </div>
     <div class="reqs">
       <p class="req reveal"><b>המחשב נשאר דולק</b>הבוטים רצים על המחשב שלכם. כדי להגיע אליהם מהטלפון, המחשב צריך להיות דלוק וער, וכוורת פתוחה.</p>
       <p class="req reveal"><b>המנויים שלכם, התנאים שלהם</b>כוורת משתמשת בחשבונות שלכם דרך הכלי הרשמי של כל חברה. התנאים ומגבלות השימוש של אותה חברה חלים.</p>
-      <p class="req reveal"><b>לינוקס</b>בלינוקס מריצים את כוורת מקוד המקור. <a class="link" href="#download" data-dl="install">מדריך ההתקנה</a> מפרט את השלבים.</p>
+      <p class="req reveal"><b>לינוקס</b>בלינוקס מריצים את כוורת מקוד המקור. <a class="link" href="#download" data-dl="guide">מדריך ההתקנה המלא</a> מפרט את השלבים.</p>
     </div>
   </div>
 </section>
@@ -363,7 +382,7 @@
       <img src="../assets/icon.svg" width="72" height="72" alt="">
       <div>
         <h2 id="oss-title">קוד פתוח, ברישיון MIT</h2>
-        <p>כל שורה בכוורת גלויה. אפשר לקרוא, לבנות בעצמכם או לעזור לשפר. האפליקציה לא שולחת נתוני שימוש; עדכונים מגיעים מדף הגרסאות של הפרויקט ב־GitHub.</p>
+        <p>קוד המקור של כוורת פתוח לכולם ב־GitHub, החל מהגרסה הציבורית הראשונה. אפשר לקרוא, לבנות בעצמכם או לעזור לשפר. האפליקציה לא שולחת נתוני שימוש; עדכונים מגיעים מדף הגרסאות של הפרויקט ב־GitHub.</p>
       </div>
       <a class="btn btn-ghost" href="#download" data-dl="repo">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>
@@ -382,7 +401,7 @@
     <div class="faq">
       <details>
         <summary>כמה עולה כוורת?</summary>
-        <div class="a"><p>כוורת עצמה היא קוד פתוח ברישיון MIT. העבודה של ה־AI רצה על המנויים שכבר יש לכם ב־Claude, ‏ChatGPT או Grok, ולכן התוכניות והמגבלות שלהם חלות. ‏Gemini עובד עם מפתח API של Google AI Studio, ש־Google מחייבת עליו.</p></div>
+        <div class="a"><p>כוורת עצמה חינמית וקוד פתוח (רישיון MIT), והיא לא מוסיפה שום תשלום. כל חברת AI מחייבת אתכם על התוכנית שלה, והמגבלות שלה חלות.</p><div class="costs-wrap"><table class="costs"><caption>למי משלמים, מנוע אחר מנוע</caption><thead><tr><th scope="col">מנוע</th><th scope="col">למי משלמים</th><th scope="col">יש אפשרות חינמית?</th></tr></thead><tbody><tr><th scope="row">Claude</th><td>מנוי חודשי, ל־Anthropic: <a class="link" href="https://claude.com/pricing" rel="noopener">התוכניות</a></td><td>—</td></tr><tr><th scope="row">ChatGPT</th><td>מנוי חודשי, ל־OpenAI: <a class="link" href="https://chatgpt.com/pricing" rel="noopener">התוכניות</a></td><td>—</td></tr><tr><th scope="row">Grok</th><td>ל־xAI; התוכנית צריכה לכלול את Grok CLI: <a class="link" href="https://grok.com/plans" rel="noopener">התוכניות</a></td><td>—</td></tr><tr><th scope="row">מפתח API של Gemini</th><td>תשלום לפי שימוש, ל־Google: <a class="link" href="https://aistudio.google.com/docs/pricing" rel="noopener">המחירים</a></td><td>ייתכן שיש מכסה חינמית: בודקים ביום ההרשמה</td></tr><tr><th scope="row">מקומי (Ollama)</th><td>חינם: <a class="link" href="https://ollama.com" rel="noopener">ollama.com</a></td><td>צריך מחשב חזק</td></tr></tbody></table></div><p>שיחות טלפון והודעות SMS, אם מגדירים אותן, מחויבות בחשבון Twilio שלכם: <a class="link" href="https://www.twilio.com/en-us/pricing" rel="noopener">המחירים של Twilio</a>.</p><p class="checked">המחירים משתנים, לכן אנחנו מקשרים לדף של כל חברה במקום לכתוב מחירים. נבדק ב־13.11.2026.</p></div>
       </details>
       <details>
         <summary>צריך להבין במחשבים?</summary>
@@ -408,6 +427,26 @@
         <summary>למה Windows מזהיר בהתקנה?</summary>
         <div class="a"><p>קובץ ההתקנה עוד לא חתום בתעודת חתימת קוד מסחרית, ולכן Windows לא מכיר אותו. לוחצים More info ואז Run anyway. כדי לוודא שהקובץ הוא בדיוק מה שהפרויקט פרסם, משווים את ה־SHA-256 שלו לרשימה בדף הגרסה.</p></div>
       </details>
+      <details id="faq-terms">
+        <summary>זה מותר לפי התנאים של חברות ה־AI?</summary>
+        <div class="a"><p>כוורת לא משתמשת בשום דלת אחורית. היא מפעילה את הכלי הרשמי של כל חברה (‏Claude Code, ‏Codex, ‏Grok CLI ו־Gemini CLI), ואתם נכנסים אליו עם החשבון שלכם, בדרך שהחברה עצמה מציעה. ‏Gemini עובד עם מפתח API משלכם. התנאים והמגבלות של התוכנית שלכם ממשיכים לחול, וכל חברה יכולה לשנות אותם.</p><p>אנחנו לא נותנים ייעוץ משפטי, אז כדאי לקרוא את התנאים של התוכניות שאתם משתמשים בהן: <a class="link" href="https://www.anthropic.com/legal/consumer-terms" rel="noopener">‏Anthropic (‏Claude)</a> · <a class="link" href="https://openai.com/policies/terms-of-use/" rel="noopener">‏OpenAI (‏ChatGPT)</a> · <a class="link" href="https://x.ai/legal/terms-of-service" rel="noopener">‏xAI (‏Grok)</a> · <a class="link" href="https://ai.google.dev/gemini-api/terms" rel="noopener">‏Google (‏Gemini API)</a>.</p></div>
+      </details>
+      <details id="faq-updates">
+        <summary>כוורת מתעדכנת לבד?</summary>
+        <div class="a"><p>ב־Windows כן. כוורת בודקת אם יש גרסה חדשה, מורידה אותה בשקט ומציגה כפתור "עדכון מוכן". היא אף פעם לא מפעילה את עצמה מחדש לבד.</p><p>במק ובאנדרואיד עוד לא: העדכון ידני. מורידים את הקובץ החדש מהדף הזה ומתקינים אותו על הישן. ה־Bots, השיחות והסיסמאות נשארים. הגרסה למק לא חתומה על ידי Apple, ולכן macOS שואל שוב אחרי כל עדכון ידני על המיקרופון או על מחזיק המפתחות (Keychain). הנתונים שלכם עדיין שם. במחזיק המפתחות: סיסמת המק ← Always Allow. במיקרופון: Allow. באייפון, האפליקציה שבמסך הבית עוברת לגרסה שבמחשב שלכם.</p></div>
+      </details>
+      <details id="faq-google">
+        <summary>‏Google כותבת שהאפליקציה לא אומתה. מה עושים?</summary>
+        <div class="a"><p>כשמחברים את יומן Google, אנשי הקשר או שליחת מיילים, ‏Google עלולה להציג את ההודעה "<bdi class="nowrap" dir="ltr">Google hasn't verified this app</bdi>" (‏Google לא אימתה את האפליקציה). ‏Google עוד בודקת את כוורת, והיא מציגה את הדף הזה לכל אפליקציה שעוד לא נבדקה. לוחצים על <span class="kbd">Advanced</span> (מתקדם), ואז על <span class="kbd">Go to Kaveret (unsafe)</span>, ובודקים למה כוורת מבקשת גישה: ליומן, לאנשי הקשר ולשליחת מיילים. היא אף פעם לא מבקשת לקרוא את המיילים שלכם או את ה־Drive.</p><p>עד שהבדיקה תסתיים, ‏Google מאפשרת רק ל־100 אנשים להתחבר בלחיצה אחת. אם כוורת כותבת "Google לא מאפשר כרגע להתחבר ל־… בלחיצה אחת", 100 המקומות מלאים: זה לא קשור לחשבון שלכם. אפשר להתחבר עכשיו בדרך אחרת: סיסמת אפליקציה ל־Gmail, הדפדפן של ה־Bot, או אפליקציית Google משלכם.</p></div>
+      </details>
+      <details id="faq-antivirus">
+        <summary>האנטי־וירוס חסם את כוורת או שם אותה בהסגר. זה בטוח?</summary>
+        <div class="a"><p>יש תוכנות אנטי־וירוס שחושדות באפליקציות חדשות שעוד אין להן חתימת קוד. חלקן מסמנות גם את ההתקנה של Grok, שמריצה את תוכנית ההתקנה הרשמית של xAI ב־PowerShell. קודם כול ודאו שהורדתם את כוורת מהאתר הזה: הכפתורים מובילים לדף הגרסאות של הפרויקט ב־GitHub. אחר כך בדקו את ה־<span class="nowrap" dir="ltr">SHA-256</span> של הקובץ, כמו שמוסבר ב<a class="link" href="install/#check" data-dl="install">עזרה בהתקנה</a>. אם הוא תואם, משחזרים אותו מההסגר של האנטי־וירוס. זה לא אומר שנמצא וירוס. לא מכבים את האנטי־וירוס. אם אתם לא בטוחים, כתבו ל־<a class="link" href="mailto:support@kaveret.ai" dir="ltr">support@kaveret.ai</a> לפני שאתם מאשרים משהו.</p></div>
+      </details>
+      <details id="faq-uninstall">
+        <summary>איך מסירים את כוורת ומוחקים הכול?</summary>
+        <div class="a"><p>ב־Windows: הגדרות › אפליקציות › אפליקציות מותקנות › Kaveret › הסרת התקנה. הסרת Kaveret שומרת את ה־Bots, השיחות והסיסמאות, כך שהתקנה מאוחרת יותר מוצאת אותם שוב. כדי למחוק הכול, מוחקים גם את תיקיית הנתונים ומסירים את התוספות שהוספתם:</p><ul><li><b>את תיקיית הנתונים.</b> <code dir="ltr">%APPDATA%\Claude Bot\</code> ב־Windows, <code dir="ltr">~/Library/Application Support/Claude Bot/</code> במק (וגם הפריט "Claude Bot Safe Storage" במחזיק המפתחות), <code dir="ltr">~/.config/Claude Bot/</code> בלינוקס. יש בה את ה־Bots, השיחות וכספת הסיסמאות עם המפתח שלה. שם התיקייה נשאר מלפני שהאפליקציה שינתה את שמה.</li><li><b>את המחשבים של ה־Bots</b>, אם התקנתם אותם (Windows). לפני ההסרה: הגדרות › מכשירים › המחשבים של ה־Bots › מתקדם › הסרת המחשבים של ה־Bots. אחר כך, אם לא צריכים את הקבצים שבה, מוחקים את התיקייה המשותפת. אותו דף מראה איפה היא: פותחים את "מתקדם" הראשון, מיד מתחת לתיאור (הנתיב מסתיים ב־<code dir="ltr">\shared</code>). מוחקים אותה, ואחר כך את התיקייה הריקה שהיא הייתה בתוכה.</li><li><b>את הכלים של חברות ה־AI</b> שכוורת התקינה בשבילכם: ‏Claude Code, ‏Codex, ‏Grok CLI ו־Gemini CLI. הם נשארים במחשב; מסירים אותם כמו שמוסבר בדף העזרה של כל חברה.</li><li><b>את Tailscale</b>, במחשב ובטלפון, אם אתם לא משתמשים בו לשום דבר אחר.</li><li><b>את הגישה ל־Google.</b> ב־<a class="link" href="https://myaccount.google.com/connections" rel="noopener" dir="ltr">myaccount.google.com/connections</a> בוחרים Kaveret › הסרת הגישה.</li><li><b>את האפליקציה בטלפון.</b> מסירים את אפליקציית האנדרואיד, או מוחקים את הסמל של כוורת ממסך הבית באייפון.</li></ul></div>
+      </details>
       <details>
         <summary>באילו שפות האפליקציה?</summary>
         <div class="a"><p>מסכי האפליקציה זמינים באנגלית, עברית, ערבית, רוסית, ספרדית, צרפתית, גרמנית ופורטוגזית.</p></div>
@@ -421,12 +460,13 @@
     <img class="bee" src="../assets/icon.svg" width="88" height="88" alt="">
     <h2 id="end-title">תנו למנויים שלכם לעבוד בשבילכם</h2>
     <div class="cta">
-      <a class="btn btn-primary btn-lg" href="#download" data-dl="releases">
+      <a class="btn btn-primary btn-lg" href="#download" data-dl="auto">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
-        <span data-soon="מגיע ביום ראשון 15.11">הורדה ל־Windows</span>
+        <span data-soon="מגיע ביום ראשון 22.11" data-auto-label data-label-win="הורדה ל־Windows" data-label-mac-arm="הורדה למק (מעבד Apple)" data-label-apk="הורדה לאנדרואיד (גרסת ניסיון)" data-label-releases="הורדת כוורת">הורדה ל־Windows</span>
       </a>
       <a class="link" href="#download">מערכות אחרות</a>
     </div>
+    <p class="dl-alt" data-alt hidden>הורדות אחרות: <a href="#download" data-dl="mac-arm" data-alt-item>מק (מעבד Apple)</a><a href="#download" data-dl="mac-intel" data-alt-item>מק (Intel)</a><a href="#download" data-dl="win" data-alt-item>Windows</a><a href="#download" data-dl="apk" data-alt-item>אנדרואיד</a><a href="#download" data-dl="releases" data-alt-item>כל הקבצים</a><a href="install/" data-dl="install">עזרה בהתקנה</a></p>
   </div>
 </section>
 
@@ -439,12 +479,14 @@
       <p>עזרה ושאלות: <a href="mailto:support@kaveret.ai" dir="ltr">support@kaveret.ai</a></p>
     </div>
     <nav aria-label="תחתית">
-      <a href="#download" data-dl="install">מדריך התקנה</a>
+      <a href="install/" data-dl="install">עזרה בהתקנה</a>
       <a href="#download" data-dl="releases">גרסאות</a>
+      <a href="changelog/">מה חדש</a>
       <a href="#download" data-dl="repo">קוד המקור</a>
       <a href="#download" data-dl="license">רישיון MIT</a>
       <a href="privacy/">פרטיות</a>
       <a href="terms/">תנאי שימוש</a>
+      <a href="accessibility/">נגישות</a>
       <a href="../" hreflang="en" lang="en">English</a>
     </nav>
     <p class="legal">‏Claude, ‏ChatGPT, ‏Grok, ‏Gemini, ‏Ollama, ‏Zoom, ‏Google Meet, ‏Microsoft Teams, טלגרם, ‏Twilio, ‏Tailscale, ‏Windows, ‏Apple, ‏macOS, ‏Intel, אנדרואיד, אייפון, ‏Safari, ‏GitHub ושמות מוצרים אחרים הם סימנים מסחריים של בעליהם. כוורת היא פרויקט קוד פתוח עצמאי, ואינה קשורה לאף אחד מהם ואינה מאושרת על ידם.</p>

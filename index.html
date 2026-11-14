@@ -55,7 +55,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg>
         עברית
       </a>
-      <a class="btn btn-primary btn-sm" href="#download" data-dl="releases"><span data-soon="Sunday 15.11">Download</span></a>
+      <a class="btn btn-primary btn-sm" href="#download"><span data-soon="Sunday 22.11">Download</span></a>
     </div>
   </div>
 </header>
@@ -69,12 +69,13 @@
     <h1 id="hero-title"><span class="line">Your own <span class="hl">AI team</span>.</span> <span class="line">No developer needed.</span></h1>
     <p class="lede">Kaveret turns the AI subscriptions you already pay for into a team of bots that work for you, on your computer. Install it, connect your account, and tell Buddy, your main bot, what you need in plain words.</p>
     <div class="cta">
-      <a class="btn btn-primary btn-lg" href="#download" data-dl="releases">
+      <a class="btn btn-primary btn-lg" href="#download" data-dl="auto">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
-        <span data-soon="Coming Sunday 15.11">Download for Windows</span>
+        <span data-soon="Coming Sunday 22.11" data-auto-label data-label-win="Download for Windows" data-label-mac-arm="Download for Mac (Apple chip)" data-label-apk="Download for Android (test app)" data-label-releases="Download Kaveret">Download for Windows</span>
       </a>
       <a class="link" href="#download">Mac, Android and iPhone</a>
     </div>
+    <p class="dl-alt" data-alt hidden>Other downloads: <a href="#download" data-dl="mac-arm" data-alt-item>Mac (Apple chip)</a><a href="#download" data-dl="mac-intel" data-alt-item>Mac (Intel)</a><a href="#download" data-dl="win" data-alt-item>Windows</a><a href="#download" data-dl="apk" data-alt-item>Android</a><a href="#download" data-dl="releases" data-alt-item>All files</a><a href="install/" data-dl="install">Install help</a></p>
     <p class="cta-note">Uses your own subscriptions, under each company's terms.</p>
 
     <figure class="stage">
@@ -118,7 +119,7 @@
       <li class="step reveal">
         <span class="n" aria-hidden="true">2</span>
         <h3>Connect what you pay for</h3>
-        <p>Pick Claude, ChatGPT or Grok. On Windows, one click installs that company's official tool inside the app. Then you sign in to your own account in its window.</p>
+        <p>Pick Claude, ChatGPT or Grok. On Windows, one click installs that company's official tool inside the app. Then you sign in to your own account in its window. Grok works if your Grok plan includes Grok CLI.</p>
         <span class="step-line" aria-hidden="true"></span>
       </li>
       <li class="step reveal">
@@ -127,6 +128,15 @@
         <p>Write what you need, the way you would text a friend. Buddy answers, or creates a new bot for the job and tells you what it did.</p>
       </li>
     </ol>
+    <figure class="demo reveal">
+      <div class="window">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" type="image/webp" srcset="assets/img/demo-en-still.webp">
+          <img src="assets/img/demo-en.gif" width="900" height="450" loading="lazy" decoding="async" alt="A short demo of Kaveret with demo data: the bots report what each one is doing, an approval card shows exactly which file will change and waits for a click, and a bot takes notes in a live meeting.">
+        </picture>
+      </div>
+      <figcaption>Three moments from the real app, with demo data: the team, an approval card, and a meeting.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -141,7 +151,7 @@
         <p>No config files, no server, no code. Kaveret walks you through the setup on screen, and after that you just talk to it.</p>
         <ul class="ticks">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>One click installs the engine.</b> On Windows, Kaveret runs the official installer for you and shows its progress.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>Buddy builds your team.</b> Ask for a bot that watches prices or sorts your email, and Buddy creates it, picks the engine and explains what it will do.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>Buddy builds your team.</b> Ask for a bot that watches prices or sums up your email, and Buddy creates it, picks the engine and explains what it will do.</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>Apps when you need them.</b> When a task needs your email or calendar, the bot shows a Connect card right in the chat.</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>Something not working?</b> Settings › Check that everything works finds the problem and takes you to the screen that fixes it.</span></li>
         </ul>
@@ -160,12 +170,12 @@
     <article class="feature flip">
       <div class="copy reveal">
         <span class="eyebrow">Your subscriptions</span>
-        <h3>Everything you pay for, working as one team. No API bills.</h3>
-        <p>Claude, ChatGPT and Grok each run on your own subscription, through that company's official tool, signed in by you. Give every bot the engine that suits it.</p>
+        <h3>Everything you pay for, working as one team.</h3>
+        <p>Kaveret itself is free. Each AI company bills you for its own plan. Claude, ChatGPT and Grok each run on your own subscription, through that company's official tool, signed in by you. Give every bot the engine that suits it.</p>
         <ul class="ticks">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>Mix engines in one team.</b> Each bot uses its own engine, and up to six bots can talk in one group chat.</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>Hit a usage limit?</b> Move the bot to another engine in one click, or let it carry on automatically with another company's engine.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>See what you've used.</b> How much of each plan is gone, with a heads-up at 80%.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>See what you've used.</b> For Claude and ChatGPT, how much of your plan is gone, with a heads-up at 80%.</span></li>
         </ul>
       </div>
       <figure class="shot shot-inset reveal">
@@ -194,7 +204,7 @@
         <p>A new bot shows you a card and waits for your OK before it changes a file, runs a command that changes something, sends a message or spends money. You decide what it may do from then on.</p>
         <ul class="ticks">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>Outside content can't make it act quietly.</b> After a bot reads a web page, an email or someone else's message, every action in that chat needs a fresh OK, and passwords and secrets are held back.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>The big things come to you.</b> In the recommended setting, payments, passwords, messages to other people, installs and system changes always ask, even when routine steps run on their own.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>The big things come to you.</b> In the recommended setting, payments, passwords, messages to other people, installs and system changes always ask.</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><b>Undo.</b> See what a bot changed in its own folder, and undo it in one click.</span></li>
         </ul>
       </div>
@@ -230,13 +240,13 @@
       <article class="oc reveal">
         <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
         <h3>Answers that wait for you</h3>
-        <p>It reads your inbox and writes replies for you. They wait as drafts until you press Send, unless you've told it a recipient is fine.</p>
+        <p>It drafts replies to your email. Each one waits for you to press Send, unless you've allowed that recipient. To let it read your inbox, connect your mailbox once with a Gmail app password.</p>
         <span class="who">Small business</span>
       </article>
       <article class="oc reveal">
         <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg></span>
         <h3>Notes from every meeting</h3>
-        <p>Once you approve, it joins your Zoom, Google Meet or Teams call and sends you the summary, decisions and to-dos.</p>
+        <p>Once you approve, it joins your Zoom, Google Meet or Teams call as a guest (the host lets it in, and the call needs captions on) and sends you the summary, decisions and to-dos.</p>
         <span class="who">Small business</span>
       </article>
       <article class="oc reveal">
@@ -258,7 +268,12 @@
         <span class="who">Everyone</span>
       </article>
     </div>
-    <p class="fine reveal">Some of these need a one-time connection: your email account, a Telegram bot or a meeting link. Phone calls and text messages need your own Twilio account.</p>
+    <div class="tpl-strip reveal" aria-labelledby="tpl-title">
+      <h3 id="tpl-title">Start from a template</h3>
+      <p>Ready-made bots, each with its own instructions. In Kaveret, choose New Bot, then From a template. Or just ask Buddy.</p>
+      <ul class="tpl-list"><li data-tpl="personal-assistant">Personal assistant</li><li data-tpl="shopping">Shopping &amp; orders</li><li data-tpl="travel">Travel planner</li><li data-tpl="research">Researcher</li><li data-tpl="finance-tracker">Finance tracker</li><li data-tpl="meeting-notes">Meeting notes</li><li data-tpl="home-maintenance">Home maintenance</li><li data-tpl="homework-helper">Kids&#39; homework helper</li></ul>
+    </div>
+    <p class="fine reveal">Some of these need a one-time connection: your email account, a Telegram bot or a meeting link. The one-click Google connection covers your calendar, contacts and sending email; reading your inbox uses a Gmail app password (one form) or the bot's own browser. Phone calls and text messages need your own Twilio account.</p>
   </div>
 </section>
 
@@ -322,43 +337,47 @@
       <span class="eyebrow">Download and install</span>
       <h2 id="dl-title">Get Kaveret</h2>
       <p>Kaveret runs on your computer. Your phone reaches it through Tailscale, a free app you install on both.</p>
-      <p class="launch-note" id="launch-note" hidden>Downloads open on Sunday 15.11, with the first public release. Until then the download buttons stay on this page.</p>
+      <p class="launch-note" id="launch-note" hidden>Downloads open on Sunday 22.11, with the first public release. Until then the download buttons stay on this page.</p>
+      <p class="dl-help"><a class="link" href="install/" data-dl="install">Install help, step by step: Windows, Mac and Android</a> · <a class="link" href="install/#requirements" data-dl="install">What your computer needs</a></p>
     </div>
     <div class="dl-grid">
       <article class="card main reveal" aria-labelledby="win-title">
         <h3 id="win-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Windows</h3>
-        <p>The installer comes from the project's releases page on GitHub.</p>
-        <a class="btn btn-primary btn-lg" href="#download" data-dl="releases">
+        <p>For Windows 10 and 11 (64-bit). The installer comes from the project's releases page on GitHub.</p>
+        <a class="btn btn-primary btn-lg" href="#download" data-dl="win">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
-          <span data-soon="Coming Sunday 15.11">Download for Windows</span>
+          <span data-soon="Coming Sunday 22.11">Download for Windows</span>
         </a>
         <ol class="howto">
-          <li><span>Download <b>Kaveret-Setup-<i>version</i>.exe</b> from the releases page and open it.</span></li>
+          <li><span>Download <b>Kaveret-Setup.exe</b> and open it.</span></li>
           <li><span>Windows shows <b>"Windows protected your PC"</b>. This happens because the app is new and its installer isn't code-signed yet.</span></li>
           <li><span>Click <span class="kbd">More info</span>, then <span class="kbd">Run anyway</span>.</span></li>
           <li><span>Finish the setup. Kaveret opens with Buddy, ready to connect your first subscription.</span></li>
         </ol>
         <div class="smart">
           <h4>Want to check the file first?</h4>
-          <p>Every release lists a SHA-256 for each file. The <a class="link" href="#download" data-dl="install">install guide</a> shows the one command to compare them.</p>
+          <p>Every release lists a SHA-256 for each file. The <a class="link" href="install/#check" data-dl="install">install help</a> shows the one command to compare them.</p>
         </div>
       </article>
       <article class="card reveal" aria-labelledby="mac-title">
         <h3 id="mac-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg>Mac <span class="tag">Beta</span></h3>
-        <p>For Apple silicon and Intel. The Mac build isn't notarized by Apple yet, so the first time you open it, right-click Kaveret and choose Open. On macOS 15 or newer, go to System Settings › Privacy &amp; Security › Open Anyway.</p>
-        <a class="btn btn-ghost btn-sm" href="#download" data-dl="releases"><span data-soon="Mac: coming 15.11">Mac downloads</span></a>
+        <p>For Apple silicon and Intel. The Mac build isn't notarized by Apple yet, so the first time you open it, right-click Kaveret and choose Open. On macOS 15 or newer, go to System Settings › Privacy &amp; Security › Open Anyway. It doesn't update itself yet: to update, download the new file and install it over the old one.</p>
+        <p class="which">Which Mac do you have? Apple menu › About This Mac. "Chip: Apple M…" means Apple chip; "Processor: Intel" means Intel.</p>
+        <div class="btn-row"><a class="btn btn-ghost btn-sm" href="#download" data-dl="mac-arm"><span data-soon="Apple chip: coming 22.11">Mac with Apple chip</span></a><a class="btn btn-ghost btn-sm" href="#download" data-dl="mac-intel"><span data-soon="Intel: coming 22.11">Mac with Intel</span></a></div>
+        <p class="card-help"><a class="link" href="install/#mac" data-dl="install">Mac install help</a></p>
       </article>
       <article class="card reveal" aria-labelledby="phone-title">
         <h3 id="phone-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>Phone <span class="tag">Test build</span></h3>
         <p><b>What you need:</b> Tailscale, a free app, on your computer and on your phone, signed in to the same Tailscale account on both. It lets your phone reach Kaveret privately. In Kaveret, Settings › Devices › Access from your phone and other computers walks you through it and shows a QR code.</p>
-        <p><b>Android:</b> install the test app by hand from the releases page (allow installs from that source when asked), then enter the address shown in Settings › Devices. <b>iPhone:</b> scan the QR code with the camera, then in Safari choose Add to Home Screen.</p>
-        <a class="btn btn-ghost btn-sm" href="phone.html">Phone setup guide</a>
+        <p><b>Android:</b> download Kaveret.apk on the phone and install it by hand (allow installs from that source when asked; if Google Play Protect warns, choose Install anyway), then enter the address shown in Settings › Devices. <b>iPhone:</b> scan the QR code with the camera, then in Safari choose Add to Home Screen.</p>
+        <div class="btn-row"><a class="btn btn-ghost btn-sm" href="#download" data-dl="apk"><span data-soon="Android: coming 22.11">Android test app</span></a><a class="btn btn-ghost btn-sm" href="phone.html">Phone setup guide</a></div>
+        <p class="card-help"><a class="link" href="install/#android" data-dl="install">Android install help</a></p>
       </article>
     </div>
     <div class="reqs">
       <p class="req reveal"><b>Your computer stays on</b>Your bots run on your computer. To reach them from your phone, the computer has to be on and awake with Kaveret running.</p>
       <p class="req reveal"><b>Your subscriptions, their terms</b>Kaveret uses your own accounts through each company's official tool. That company's terms and usage limits apply.</p>
-      <p class="req reveal"><b>Linux</b>Kaveret runs from source on Linux. The <a class="link" href="#download" data-dl="install">install guide</a> has the steps.</p>
+      <p class="req reveal"><b>Linux</b>Kaveret runs from source on Linux. The <a class="link" href="#download" data-dl="guide">full install guide</a> has the steps.</p>
     </div>
   </div>
 </section>
@@ -370,7 +389,7 @@
       <img src="assets/icon.svg" width="72" height="72" alt="">
       <div>
         <h2 id="oss-title">Open source, MIT licence</h2>
-        <p>Every line of Kaveret is public. Read it, build it yourself, or help make it better. The app sends no analytics; updates come from the project's GitHub releases.</p>
+        <p>Kaveret's source code is public on GitHub, starting with the first public release. Read it, build it yourself, or help make it better. The app sends no analytics; updates come from the project's GitHub releases.</p>
       </div>
       <a class="btn btn-ghost" href="#download" data-dl="repo">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>
@@ -390,7 +409,7 @@
     <div class="faq">
       <details>
         <summary>What does Kaveret cost?</summary>
-        <div class="a"><p>Kaveret itself is open source under the MIT licence. The AI work runs on the subscriptions you already have with Claude, ChatGPT or Grok, so their plans and limits apply. Gemini uses a Google AI Studio API key, which Google bills.</p></div>
+        <div class="a"><p>Kaveret itself is free and open source (MIT licence), and it adds nothing to your bills. Each AI company bills you for its own plan, and its limits apply.</p><div class="costs-wrap"><table class="costs"><caption>Who you pay, engine by engine</caption><thead><tr><th scope="col">Engine</th><th scope="col">Who you pay</th><th scope="col">Free option?</th></tr></thead><tbody><tr><th scope="row">Claude</th><td>A monthly plan, paid to Anthropic: <a class="link" href="https://claude.com/pricing" rel="noopener">plans</a></td><td>—</td></tr><tr><th scope="row">ChatGPT</th><td>A monthly plan, paid to OpenAI: <a class="link" href="https://chatgpt.com/pricing" rel="noopener">plans</a></td><td>—</td></tr><tr><th scope="row">Grok</th><td>xAI; your plan must include Grok CLI: <a class="link" href="https://grok.com/plans" rel="noopener">plans</a></td><td>—</td></tr><tr><th scope="row">Gemini (API key)</th><td>Pay per use, to Google: <a class="link" href="https://aistudio.google.com/docs/pricing" rel="noopener">prices</a></td><td>There may be a free quota: check on the day</td></tr><tr><th scope="row">Local (Ollama)</th><td>Free: <a class="link" href="https://ollama.com" rel="noopener">ollama.com</a></td><td>Needs a strong computer</td></tr></tbody></table></div><p>Phone calls and text messages, if you set them up, are billed to your own Twilio account: <a class="link" href="https://www.twilio.com/en-us/pricing" rel="noopener">Twilio prices</a>.</p><p class="checked">Prices change, so we link to each company's own page instead of quoting them. Checked on 13.11.2026.</p></div>
       </details>
       <details>
         <summary>Do I need to be technical?</summary>
@@ -416,6 +435,26 @@
         <summary>Why does Windows warn me when I install it?</summary>
         <div class="a"><p>The installer isn't code-signed with a commercial certificate yet, so Windows doesn't recognise it. Click More info, then Run anyway. If you'd like to be sure the file is the one the project published, compare its SHA-256 with the list on the release.</p></div>
       </details>
+      <details id="faq-terms">
+        <summary>Is this allowed by the AI companies' terms?</summary>
+        <div class="a"><p>Kaveret uses no back door. It runs each company's own official tool (Claude Code, Codex, Grok CLI and the Gemini CLI), and you sign in to it with your own account, the way that company offers it. Gemini uses your own API key. Your plan's terms and usage limits still apply, and each company can change them.</p><p>We can't give legal advice, so please read the terms of the plans you use: <a class="link" href="https://www.anthropic.com/legal/consumer-terms" rel="noopener">Anthropic (Claude)</a> · <a class="link" href="https://openai.com/policies/terms-of-use/" rel="noopener">OpenAI (ChatGPT)</a> · <a class="link" href="https://x.ai/legal/terms-of-service" rel="noopener">xAI (Grok)</a> · <a class="link" href="https://ai.google.dev/gemini-api/terms" rel="noopener">Google (Gemini API)</a>.</p></div>
+      </details>
+      <details id="faq-updates">
+        <summary>Does Kaveret update itself?</summary>
+        <div class="a"><p>On Windows, yes. Kaveret checks for a new version, downloads it quietly and shows an "update ready" button. It never restarts by itself.</p><p>On Mac and Android, not yet: updates are manual. Download the new file from this page and install it over the old one. Your bots, chats and passwords stay. After a manual update, macOS treats the app as new, because the Mac version isn't signed by Apple, and asks again for the microphone or the keychain. Your data is still there. Keychain: your Mac login password, then Always Allow. Microphone: Allow. On iPhone, the home-screen app follows the version on your computer.</p></div>
+      </details>
+      <details id="faq-google">
+        <summary>Google says the app isn't verified. What do I do?</summary>
+        <div class="a"><p>When you connect Google Calendar, Contacts or sending email, Google may show "Google hasn't verified this app". Google is still reviewing Kaveret, and it shows this page for every app it hasn't reviewed yet. Click <span class="kbd">Advanced</span>, then <span class="kbd">Go to Kaveret (unsafe)</span>, and check what Kaveret asks for: your calendar, your contacts and sending email. It never asks to read your mail or your Drive.</p><p>Until Google finishes its review, Google lets only 100 people use the one-click Google sign-in. If Kaveret says "Google isn't allowing one-click sign-in to … right now", the 100 places are full. It's not about your account: you can connect another way now, with a Gmail app password, the Bot's browser, or your own Google app.</p></div>
+      </details>
+      <details id="faq-antivirus">
+        <summary>My antivirus blocked or quarantined Kaveret. Is it safe?</summary>
+        <div class="a"><p>Kaveret's installer is new and not code-signed yet, and some antivirus programs block new unsigned programs. The Grok CLI install downloads xAI's official install script and runs it, which some antivirus programs also block. It does not mean a virus was found. First make sure you downloaded Kaveret from this site: the buttons lead to the project's releases on GitHub. Then check the file's SHA-256, as the <a class="link" href="install/#check" data-dl="install">install help</a> shows. If it matches, restore it from the antivirus quarantine. Don't turn your antivirus off. If you're not sure, write to <a class="link" href="mailto:support@kaveret.ai">support@kaveret.ai</a> before you allow anything.</p></div>
+      </details>
+      <details id="faq-uninstall">
+        <summary>How do I uninstall Kaveret and delete everything?</summary>
+        <div class="a"><p>On Windows: Settings › Apps › Installed apps › Kaveret › Uninstall. Uninstalling Kaveret keeps your Bots, chats and passwords, so a later install finds them again. To remove everything, also delete the data folder and remove the extras you added:</p><ul><li><b>Your data folder.</b> <code>%APPDATA%\Claude Bot\</code> on Windows, <code>~/Library/Application Support/Claude Bot/</code> on Mac (and the keychain item "Claude Bot Safe Storage"), <code>~/.config/Claude Bot/</code> on Linux. It holds your bots, chats and the password vault with its key. The folder name is from before the app was renamed.</li><li><b>The bots' own computers</b>, if you installed them (Windows). Remove them before you uninstall the app: Settings › Devices › The Bots’ computers › Advanced › Remove the Bots' computers. Then, if you don't need the files in it, delete the shared folder. The same page shows where it is: open the first Advanced, right under the description (the path ends in <code>\shared</code>). Delete that folder, then the empty folder it was in.</li><li><b>The AI companies' tools</b> that Kaveret installed for you: Claude Code, Codex, Grok CLI and the Gemini CLI. They stay on your computer; remove them as each company's help page explains.</li><li><b>Tailscale</b>, on the computer and the phone, if you don't use it for anything else.</li><li><b>Google access.</b> At <a class="link" href="https://myaccount.google.com/connections" rel="noopener">myaccount.google.com/connections</a>, choose Kaveret › Remove access.</li><li><b>The phone app.</b> Uninstall the Android app, or delete the Kaveret icon from your iPhone's home screen.</li></ul></div>
+      </details>
       <details>
         <summary>Which languages does the app speak?</summary>
         <div class="a"><p>The app's screens are available in English, Hebrew, Arabic, Russian, Spanish, French, German and Portuguese.</p></div>
@@ -430,12 +469,13 @@
     <img class="bee" src="assets/icon.svg" width="88" height="88" alt="">
     <h2 id="end-title">Put your subscriptions to work</h2>
     <div class="cta">
-      <a class="btn btn-primary btn-lg" href="#download" data-dl="releases">
+      <a class="btn btn-primary btn-lg" href="#download" data-dl="auto">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
-        <span data-soon="Coming Sunday 15.11">Download for Windows</span>
+        <span data-soon="Coming Sunday 22.11" data-auto-label data-label-win="Download for Windows" data-label-mac-arm="Download for Mac (Apple chip)" data-label-apk="Download for Android (test app)" data-label-releases="Download Kaveret">Download for Windows</span>
       </a>
       <a class="link" href="#download">Other platforms</a>
     </div>
+    <p class="dl-alt" data-alt hidden>Other downloads: <a href="#download" data-dl="mac-arm" data-alt-item>Mac (Apple chip)</a><a href="#download" data-dl="mac-intel" data-alt-item>Mac (Intel)</a><a href="#download" data-dl="win" data-alt-item>Windows</a><a href="#download" data-dl="apk" data-alt-item>Android</a><a href="#download" data-dl="releases" data-alt-item>All files</a><a href="install/" data-dl="install">Install help</a></p>
   </div>
 </section>
 
@@ -448,12 +488,14 @@
       <p>Help and questions: <a href="mailto:support@kaveret.ai">support@kaveret.ai</a></p>
     </div>
     <nav aria-label="Footer">
-      <a href="#download" data-dl="install">Install guide</a>
+      <a href="install/" data-dl="install">Install help</a>
       <a href="#download" data-dl="releases">Releases</a>
+      <a href="changelog/">What's new</a>
       <a href="#download" data-dl="repo">Source code</a>
       <a href="#download" data-dl="license">MIT licence</a>
       <a href="privacy/">Privacy</a>
       <a href="terms/">Terms</a>
+      <a href="accessibility/">Accessibility</a>
       <a href="he/" hreflang="he" lang="he">עברית</a>
     </nav>
     <p class="legal">Claude, ChatGPT, Grok, Gemini, Ollama, Zoom, Google Meet, Microsoft Teams, Telegram, Twilio, Tailscale, Windows, Apple, macOS, Intel, Android, iPhone, Safari, GitHub and other product names are trademarks of their owners. Kaveret is an independent open-source project and is not affiliated with or endorsed by any of them.</p>

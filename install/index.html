@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Install Kaveret: help for Windows, Mac and Android</title>
+<meta name="description" content="Install Kaveret step by step: what to click when Windows, macOS or Android warns about a new app, which Mac file you need, and what your computer needs.">
+<meta name="theme-color" content="#FBF8F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E0C08" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://kaveret.ai/install/">
+<link rel="alternate" hreflang="en" href="https://kaveret.ai/install/">
+<link rel="alternate" hreflang="he" href="https://kaveret.ai/he/install/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preload" href="../assets/fonts/heebo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/config.js" defer></script>
+<script src="../assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="Kaveret, home">
+      <img src="../assets/icon.svg" width="32" height="32" alt="">
+      <span>Kaveret</span>
+    </a>
+    <div class="top-actions">
+      <a class="lang" href="../he/install/" hreflang="he" lang="he" aria-label="עברית (Hebrew)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg>
+        עברית
+      </a>
+      <a class="btn btn-ghost btn-sm" href="../#download">Back to the download page</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="sec">
+  <div class="wrap guide">
+    <div class="head">
+      <span class="eyebrow">Install help</span>
+      <h1>Install Kaveret, step by step</h1>
+      <p>Kaveret is new and free, so it isn't signed with a paid certificate yet. That is why Windows, macOS and Android ask once before the first start. Below is exactly what to click. It does not mean anything was found in the file.</p>
+      <nav class="toc" aria-label="On this page">
+        <a class="link" href="#windows">Windows</a>
+        <a class="link" href="#mac">Mac</a>
+        <a class="link" href="#android">Android</a>
+        <a class="link" href="#requirements">What your computer needs</a>
+        <a class="link" href="#check">Check the file</a>
+      </nav>
+    </div>
+
+    <h2 id="windows">Windows</h2>
+    <div class="btn-row"><a class="btn btn-primary btn-sm" href="../#download" data-dl="win"><span data-soon="Windows: coming Sunday 22.11">Download Kaveret-Setup.exe</span></a></div>
+    <ol class="howto">
+      <li><span>Open <b>Kaveret-Setup.exe</b> from your downloads. If the browser says the file isn't commonly downloaded, choose <span class="kbd">Keep</span>.</span></li>
+      <li><span>Windows shows a blue window: <b>"Windows protected your PC"</b>. Click <span class="kbd">More info</span> (the small link under the text), then <span class="kbd">Run anyway</span>.</span></li>
+      <li><span>Finish the setup. Kaveret opens with Buddy, ready to connect your first subscription.</span></li>
+    </ol>
+
+    <h2 id="mac">Mac <span class="tag">Beta</span></h2>
+    <p><b>Which Mac do you have?</b> Apple menu › About This Mac. "Chip: Apple M1, M2, M3…" means Apple chip. "Processor: … Intel …" means Intel.</p>
+    <div class="btn-row"><a class="btn btn-primary btn-sm" href="../#download" data-dl="mac-arm"><span data-soon="Apple chip: coming 22.11">Mac with Apple chip</span></a><a class="btn btn-ghost btn-sm" href="../#download" data-dl="mac-intel"><span data-soon="Intel: coming 22.11">Mac with Intel</span></a></div>
+    <ol class="howto">
+      <li><span>Open the <b>.dmg</b> file and drag <b>Kaveret</b> into <b>Applications</b>.</span></li>
+      <li><span>The first time, in Applications, right-click (or Control-click) Kaveret and choose <span class="kbd">Open</span>, then <span class="kbd">Open</span> again.</span></li>
+      <li><span><b>On macOS 15 or newer:</b> open it once and click <span class="kbd">Done</span>. Then go to System Settings › Privacy &amp; Security, scroll down and click <span class="kbd">Open Anyway</span>.</span></li>
+    </ol>
+    <h3>If macOS says Kaveret "is damaged"</h3>
+    <p>This is macOS being careful with an app from the internet, not a broken file. Try the steps above first. Only if it still won't open: open the <b>Terminal</b> app, paste this line, press Enter, and open Kaveret again.</p>
+    <p><code>xattr -cr /Applications/Kaveret.app</code></p>
+    <p>On Mac, updates aren't automatic yet: to update, download the new file and install it over the old one.</p>
+
+    <h2 id="android">Android <span class="tag">Test build</span></h2>
+    <p>The Android app is a remote control for Kaveret on your computer. The computer has to be on, with Kaveret open. Set up phone access on the computer first: the <a class="link" href="../phone.html">phone setup guide</a> shows how.</p>
+    <div class="btn-row"><a class="btn btn-primary btn-sm" href="../#download" data-dl="apk"><span data-soon="Android: coming 22.11">Download Kaveret.apk</span></a></div>
+    <ol class="howto">
+      <li><span>On the phone, download <b>Kaveret.apk</b> and open it.</span></li>
+      <li><span>Android asks whether to allow installs from this source (your browser or Files). Tap <span class="kbd">Settings</span>, turn on <span class="kbd">Allow from this source</span>, go back and tap <span class="kbd">Install</span>.</span></li>
+      <li><span>If <b>Google Play Protect</b> warns that it doesn't know the app, tap <span class="kbd">More details</span>, then <span class="kbd">Install anyway</span>. It warns because the app isn't on Google Play yet.</span></li>
+      <li><span>On first start, enter the address that Kaveret on your computer shows in Settings › Devices.</span></li>
+    </ol>
+    <p><b>iPhone:</b> there's nothing to install. The <a class="link" href="../phone.html">phone setup guide</a> shows how to add Kaveret to your home screen.</p>
+
+    <h2 id="requirements">What your computer needs</h2>
+    <ul>
+      <li><b>Windows:</b> Windows 10 or 11, 64-bit.</li>
+      <li><b>Mac:</b> macOS 12 (Monterey) or newer, with an Apple chip or Intel.</li>
+      <li><b>Memory:</b> 8 GB of RAM recommended.</li>
+      <li><b>Disk:</b> the download is about 135 MB on Windows and about 140 MB on Mac. Keep at least 2 GB free for the app, its data and the AI tools it installs.</li>
+      <li><b>Android phone:</b> Android 7 or newer. The app is about 5 MB.</li>
+      <li><b>Internet:</b> needed while you work, because the AI runs at each company you connect.</li>
+      <li><b>Linux:</b> no installer yet; Kaveret runs from its source code. The <a class="link" href="../#download" data-dl="guide">full install guide</a> has the steps.</li>
+    </ul>
+
+    <h2 id="check">Check the file (optional)</h2>
+    <p>Every release lists a SHA-256 code for each file in <a class="link" href="../#download" data-dl="sums">SHA256SUMS</a>. To be sure your file is the one the project published, compare its code with that list.</p>
+    <ul>
+      <li><b>Windows:</b> in PowerShell, in your Downloads folder: <code>Get-FileHash .\Kaveret-Setup.exe</code></li>
+      <li><b>Mac:</b> in Terminal, in your Downloads folder: <code>shasum -a 256 Kaveret-mac-arm64.dmg</code> (or <code>Kaveret-mac-x64.dmg</code>)</li>
+    </ul>
+
+    <h2>Still stuck?</h2>
+    <p>Write to <a class="link" href="mailto:support@kaveret.ai">support@kaveret.ai</a> and say what you see on the screen. A screenshot helps.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="../"><img src="../assets/icon.svg" width="28" height="28" alt=""><span>Kaveret</span></a>
+      <p>Help and questions: <a href="mailto:support@kaveret.ai">support@kaveret.ai</a></p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="../">Home</a>
+      <a href="../changelog/">What's new</a>
+      <a href="../phone.html">Phone setup guide</a>
+      <a href="../accessibility/">Accessibility</a>
+      <a href="../he/install/" hreflang="he" lang="he">עברית</a>
+    </nav>
+    <p class="legal">Windows, Apple, macOS, Intel, Android, Google Play, iPhone, GitHub and other product names are trademarks of their owners. Kaveret is an independent open-source project and is not affiliated with or endorsed by any of them.</p>
+  </div>
+</footer>
+</body>
+</html>
